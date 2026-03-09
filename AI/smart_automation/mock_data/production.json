@@ -1,0 +1,62 @@
+{
+    "production_orders": [
+        {
+            "order_id": "PO-001",
+            "quotation_id": "Q-101",
+            "customer_name": "Rajesh Sharma",
+            "items": [
+                {
+                    "product": "Modular Kitchen",
+                    "quantity": 1,
+                    "material": "Marine Plywood"
+                }
+            ],
+            "status": "in_progress",
+            "priority": "high",
+            "start_date": "2024-12-11",
+            "expected_completion": "2024-12-25",
+            "actual_completion": null,
+            "assigned_team": "Team A",
+            "progress_percentage": 65
+        },
+        {
+            "order_id": "PO-002",
+            "quotation_id": "Q-103",
+            "customer_name": "Amit Kumar",
+            "items": [
+                {
+                    "product": "Office Desk",
+                    "quantity": 5,
+                    "material": "Oak"
+                }
+            ],
+            "status": "completed",
+            "priority": "medium",
+            "start_date": "2024-12-15",
+            "expected_completion": "2024-12-20",
+            "actual_completion": "2024-12-19",
+            "completion_date": "2024-12-19",
+            "assigned_team": "Team B",
+            "progress_percentage": 100
+        },
+        {
+            "order_id": "PO-003",
+            "quotation_id": "Q-105",
+            "customer_name": "Lakshmi Menon",
+            "items": [
+                {
+                    "product": "Bedroom Set",
+                    "quantity": 1,
+                    "material": "Marine Plywood"
+                }
+            ],
+            "status": "pending",
+            "priority": "high",
+            "start_date": null,
+            "expected_completion": null,
+            "actual_completion": null,
+            "assigned_team": null,
+            "progress_percentage": 0
+        }
+    ]
+}

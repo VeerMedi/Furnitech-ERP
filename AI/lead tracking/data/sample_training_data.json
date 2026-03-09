@@ -1,0 +1,3717 @@
+[
+  {
+    "_id": "test_0",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 52,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 2,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 0",
+      "contact": "9859590104",
+      "email": "customer0@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 58
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 47226,
+      "daysToConversion": 32,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_1",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 50,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 1,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 1",
+      "contact": "987880807",
+      "email": "customer1@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 52
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-14T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_2",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 31,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "698875191",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 42
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-01T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_3",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 21,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 3",
+      "contact": "631488479",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 39
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-24T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_4",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 48,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 4",
+      "contact": "9865176426",
+      "email": "customer4@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 59
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 20306,
+      "daysToConversion": 48,
+      "outcomeDate": "2025-12-13T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_5",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 58,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 2,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 5",
+      "contact": "9841049499",
+      "email": "customer5@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 61
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-15T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_6",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 32,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 37
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-09T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_7",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 91,
+    "notes": "Detailed inquiry for Bedroom Wardrobe. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 9,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 7 Premium",
+      "contact": "+91-9833703350",
+      "email": "customer7@company.com",
+      "address": "342 Business Park, Bangalore - 56074",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 91
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 67634,
+      "daysToConversion": 14,
+      "outcomeDate": "2025-12-24T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_8",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 93,
+    "notes": "Detailed inquiry for Custom Office Furniture. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 8,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 8 Premium",
+      "contact": "+91-9817206509",
+      "email": "customer8@company.com",
+      "address": "10 Business Park, Bangalore - 56097",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 94
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": null,
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-05T18:30:00.000Z",
+      "lostReason": "Budget constraints"
+    }
+  },
+  {
+    "_id": "test_9",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 93,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 11,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 9 Premium",
+      "contact": "+91-9846775925",
+      "email": "customer9@company.com",
+      "address": "300 Business Park, Bangalore - 56083",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 87
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 97525,
+      "daysToConversion": 9,
+      "outcomeDate": "2025-12-24T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_10",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 57,
+    "notes": "Interested in Living Room Sofa. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 3,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 10",
+      "contact": "9843054571",
+      "email": "customer10@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 61
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 58117,
+      "daysToConversion": 29,
+      "outcomeDate": "2025-12-10T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_11",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 25,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 11",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 26
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-13T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_12",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 24,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Custom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 12",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 31
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-03T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_13",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 80,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 9,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 13 Premium",
+      "contact": "+91-9816052496",
+      "email": "customer13@company.com",
+      "address": "11 Business Park, Bangalore - 56049",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 87
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 71559,
+      "daysToConversion": 19,
+      "outcomeDate": "2025-12-05T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_14",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 57,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 3,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 14",
+      "contact": "9879209715",
+      "email": "customer14@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 50
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 25394,
+      "daysToConversion": 42,
+      "outcomeDate": "2025-12-25T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_15",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 45,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 2,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 15",
+      "contact": "9877108529",
+      "email": "customer15@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-17T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_16",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 87,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 8,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 16 Premium",
+      "contact": "+91-9856625182",
+      "email": "customer16@company.com",
+      "address": "394 Business Park, Bangalore - 56060",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 90
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 189524,
+      "daysToConversion": 28,
+      "outcomeDate": "2025-12-20T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_17",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 29,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Custom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 17",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 40
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-29T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_18",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "NEW",
+    "probability": 46,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 3,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 18",
+      "contact": "9832767793",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 54
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 55269,
+      "daysToConversion": 14,
+      "outcomeDate": "2025-12-14T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_19",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 88,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 7,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 19 Premium",
+      "contact": "+91-9851505523",
+      "email": "customer19@company.com",
+      "address": "178 Business Park, Bangalore - 5602",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 91
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 74930,
+      "daysToConversion": 14,
+      "outcomeDate": "2025-12-29T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_20",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 23,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 20",
+      "contact": "488336955",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 39
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-12T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_21",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 30,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Custom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "243692697",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 33
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-01T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_22",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 82,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 11,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 22 Premium",
+      "contact": "+91-9893060792",
+      "email": "customer22@company.com",
+      "address": "248 Business Park, Bangalore - 56029",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 88
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 139465,
+      "daysToConversion": 29,
+      "outcomeDate": "2025-12-21T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_23",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 78,
+    "notes": "Detailed inquiry for Custom Office Furniture. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 8,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 23 Premium",
+      "contact": "+91-9886796386",
+      "email": "customer23@company.com",
+      "address": "169 Business Park, Bangalore - 56077",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 93
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 74546,
+      "daysToConversion": 12,
+      "outcomeDate": "2025-12-26T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_24",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 58,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 24",
+      "contact": "9878405961",
+      "email": "customer24@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 38633,
+      "daysToConversion": 48,
+      "outcomeDate": "2025-12-25T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_25",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 48,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 1,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 25",
+      "contact": "984581118",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-12T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_26",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 57,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 26",
+      "contact": "9842698998",
+      "email": "customer26@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 60
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-20T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_27",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 60,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 1,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 27",
+      "contact": "983025805",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 69
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-26T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_28",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 53,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 2,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 28",
+      "contact": "9862559895",
+      "email": "customer28@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-21T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_29",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 52,
+    "notes": "Interested in Living Room Sofa. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 1,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 29",
+      "contact": "9833566359",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 50
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 28157,
+      "daysToConversion": 11,
+      "outcomeDate": "2025-12-29T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_30",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 65,
+    "notes": "Interested in Living Room Sofa. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 3,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 30",
+      "contact": "9883491313",
+      "email": "customer30@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 68
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 34582,
+      "daysToConversion": 29,
+      "outcomeDate": "2025-12-06T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_31",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "NEW",
+    "probability": 57,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 3,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 31",
+      "contact": "9876758485",
+      "email": "customer31@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 26410,
+      "daysToConversion": 16,
+      "outcomeDate": "2025-12-08T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_32",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 88,
+    "notes": "Detailed inquiry for Custom Office Furniture. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 12,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 32 Premium",
+      "contact": "+91-9828126291",
+      "email": "customer32@company.com",
+      "address": "150 Business Park, Bangalore - 56056",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 94
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 124909,
+      "daysToConversion": 9,
+      "outcomeDate": "2025-11-30T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_33",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 23,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "160028546",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 34
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-17T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_34",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 20,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 34",
+      "contact": "159523894",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 36
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-26T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_35",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 16,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 35",
+      "contact": "278316209",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 33
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 18897,
+      "daysToConversion": 32,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_36",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 85,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 5,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 36 Premium",
+      "contact": "+91-9813246114",
+      "email": "customer36@company.com",
+      "address": "421 Business Park, Bangalore - 56078",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 87
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 152119,
+      "daysToConversion": 32,
+      "outcomeDate": "2025-12-05T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_37",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 58,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 3,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 37",
+      "contact": "9896422512",
+      "email": "customer37@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 58
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 39018,
+      "daysToConversion": 26,
+      "outcomeDate": "2025-12-13T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_38",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 59,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 1,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 38",
+      "contact": "9851938822",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 50
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 42695,
+      "daysToConversion": 12,
+      "outcomeDate": "2025-12-14T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_39",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 75,
+    "notes": "Detailed inquiry for Dining Table Set. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 12,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 39 Premium",
+      "contact": "+91-9814724476",
+      "email": "customer39@company.com",
+      "address": "483 Business Park, Bangalore - 56071",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 90
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 113790,
+      "daysToConversion": 10,
+      "outcomeDate": "2025-12-25T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_40",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 45,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 40",
+      "contact": "9842014385",
+      "email": "customer40@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 60
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-02T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_41",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 76,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 13,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 41 Premium",
+      "contact": "+91-989611318",
+      "email": "customer41@company.com",
+      "address": "257 Business Park, Bangalore - 56095",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 92
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 138254,
+      "daysToConversion": 16,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_42",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 85,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 12,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 42 Premium",
+      "contact": "+91-9896536227",
+      "email": "customer42@company.com",
+      "address": "471 Business Park, Bangalore - 56059",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 90
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 164231,
+      "daysToConversion": 11,
+      "outcomeDate": "2025-12-15T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_43",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 60,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 3,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 43",
+      "contact": "988452156",
+      "email": "customer43@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 66
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 36852,
+      "daysToConversion": 39,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_44",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 48,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 2,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 44",
+      "contact": "9811110346",
+      "email": "",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 66
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 66750,
+      "daysToConversion": 16,
+      "outcomeDate": "2025-12-26T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_45",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 26,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "174840881",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 22
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-01T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_46",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 64,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 1,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 46",
+      "contact": "9848152026",
+      "email": "customer46@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 51
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 22674,
+      "daysToConversion": 39,
+      "outcomeDate": "2025-12-20T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_47",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 87,
+    "notes": "Detailed inquiry for Bedroom Wardrobe. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 11,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 47 Premium",
+      "contact": "+91-9858668942",
+      "email": "customer47@company.com",
+      "address": "52 Business Park, Bangalore - 56059",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 92
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 91372,
+      "daysToConversion": 30,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_48",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 77,
+    "notes": "Detailed inquiry for Custom Office Furniture. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 9,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 48 Premium",
+      "contact": "+91-9871305940",
+      "email": "customer48@company.com",
+      "address": "492 Business Park, Bangalore - 56013",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 86
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 194110,
+      "daysToConversion": 18,
+      "outcomeDate": "2025-12-17T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_49",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 31,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 49",
+      "contact": "138484158",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 38
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-11-30T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_50",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 33,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 30
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-15T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_51",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 34,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 51",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 26
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-19T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_52",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 49,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 3,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 52",
+      "contact": "9839358424",
+      "email": "customer52@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 66
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_53",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 68,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 2,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 53",
+      "contact": "9869934200",
+      "email": "customer53@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 55
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 25490,
+      "daysToConversion": 38,
+      "outcomeDate": "2025-12-16T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_54",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 77,
+    "notes": "Detailed inquiry for Custom Office Furniture. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 14,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 54 Premium",
+      "contact": "+91-9835227902",
+      "email": "customer54@company.com",
+      "address": "180 Business Park, Bangalore - 56050",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 86
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 55430,
+      "daysToConversion": 8,
+      "outcomeDate": "2025-12-28T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_55",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 64,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 1,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 55",
+      "contact": "9837968107",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 69
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-09T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_56",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 67,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 1,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 56",
+      "contact": "9886951273",
+      "email": "customer56@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 69
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-22T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_57",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "CONTACTED",
+    "probability": 69,
+    "notes": "Interested in Living Room Sofa. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 1,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 57",
+      "contact": "9820552117",
+      "email": "customer57@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 63
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 36639,
+      "daysToConversion": 19,
+      "outcomeDate": "2025-12-02T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_58",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 94,
+    "notes": "Detailed inquiry for Modular Kitchen. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 11,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 58 Premium",
+      "contact": "+91-9848806025",
+      "email": "customer58@company.com",
+      "address": "185 Business Park, Bangalore - 56064",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 85
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 59665,
+      "daysToConversion": 27,
+      "outcomeDate": "2025-12-09T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_59",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 17,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 59",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 20
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-10T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_60",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 21,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "393560248",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 35
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_61",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 15,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 61",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 26
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-03T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_62",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 15,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "595362330",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 38
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_63",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 77,
+    "notes": "Detailed inquiry for Modular Kitchen. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 10,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 63 Premium",
+      "contact": "+91-9818082733",
+      "email": "customer63@company.com",
+      "address": "348 Business Park, Bangalore - 56027",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 94
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 120299,
+      "daysToConversion": 15,
+      "outcomeDate": "2025-12-05T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_64",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 21,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 64",
+      "contact": "922033277",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 22
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-11T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_65",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 64,
+    "notes": "Interested in Dining Table Set. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Dining Table Set",
+        "quantity": 3,
+        "meta": {
+          "details": "6-seater wooden dining table with chairs"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 65",
+      "contact": "9867451272",
+      "email": "customer65@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 67
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-10T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_66",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 30,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 66",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 28
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-11-30T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_67",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 17,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 67",
+      "contact": "345032161",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 27
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-16T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_68",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 15,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 68",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 29
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_69",
+    "organization": "test_org",
+    "leadPlatform": "Website",
+    "leadStatus": "NEW",
+    "probability": 46,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 2,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 69",
+      "contact": "9879375547",
+      "email": "customer69@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 65
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-02T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_70",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 67,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 70",
+      "contact": "9828275896",
+      "email": "",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 59
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 49205,
+      "daysToConversion": 23,
+      "outcomeDate": "2025-12-12T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_71",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 60,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 1,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 71",
+      "contact": "9886213760",
+      "email": "",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 68
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-06T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_72",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 18,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 72",
+      "contact": "290251972",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 30
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-16T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_73",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 57,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 2,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 73",
+      "contact": "9889503285",
+      "email": "customer73@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 66
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-24T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_74",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 17,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 74",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 23
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-18T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_75",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 34,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Living",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 75",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 20
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_76",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 23,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Custom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 76",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 26
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-08T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_77",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 62,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 2,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 77",
+      "contact": "9888351211",
+      "email": "customer77@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 63
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-14T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_78",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 83,
+    "notes": "Detailed inquiry for Modular Kitchen. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 11,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 78 Premium",
+      "contact": "+91-9832123715",
+      "email": "customer78@company.com",
+      "address": "497 Business Park, Bangalore - 56037",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 85
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 177465,
+      "daysToConversion": 34,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_79",
+    "organization": "test_org",
+    "leadPlatform": "Facebook",
+    "leadStatus": "NEW",
+    "probability": 28,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 79",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 31
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-14T18:30:00.000Z",
+      "lostReason": "Not serious"
+    }
+  },
+  {
+    "_id": "test_80",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 53,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 1,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 80",
+      "contact": "9897078262",
+      "email": "customer80@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 53
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-07T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_81",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 32,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 81",
+      "contact": "209368491",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 33
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-28T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_82",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 75,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 8,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 82 Premium",
+      "contact": "+91-98751868",
+      "email": "customer82@company.com",
+      "address": "112 Business Park, Bangalore - 56083",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 85
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 195571,
+      "daysToConversion": 13,
+      "outcomeDate": "2025-12-26T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_83",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 22,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Bedroom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 83",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 21
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-11-30T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_84",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 22,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 84",
+      "contact": "116587217",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 28
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-23T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_85",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 21,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 85",
+      "contact": "52272594",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 41
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-01T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_86",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 66,
+    "notes": "Interested in Living Room Sofa. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 1,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 86",
+      "contact": "9824739050",
+      "email": "customer86@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 54
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-16T18:30:00.000Z",
+      "lostReason": "No response"
+    }
+  },
+  {
+    "_id": "test_87",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 49,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 1,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 87",
+      "contact": "9861685334",
+      "email": "customer87@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 62
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": true,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-05T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_88",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 28,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Modular",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 88",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 28
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "UNQUALIFIED",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-15T18:30:00.000Z",
+      "lostReason": "Wrong number"
+    }
+  },
+  {
+    "_id": "test_89",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 90,
+    "notes": "Detailed inquiry for Modular Kitchen. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 10,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 89 Premium",
+      "contact": "+91-9868556772",
+      "email": "customer89@company.com",
+      "address": "189 Business Park, Bangalore - 56013",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 88
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 106599,
+      "daysToConversion": 10,
+      "outcomeDate": "2025-12-16T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_90",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "CONTACTED",
+    "probability": 66,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 1,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 90",
+      "contact": "9865885856",
+      "email": "customer90@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 69
+    },
+    "attachments": [
+      "image.jpg"
+    ],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-10T18:30:00.000Z",
+      "lostReason": "Changed requirements"
+    }
+  },
+  {
+    "_id": "test_91",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 63,
+    "notes": "Interested in Custom Office Furniture. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Custom Office Furniture",
+        "quantity": 2,
+        "meta": {
+          "details": "Ergonomic chairs and standing desks for corporate setup"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 91",
+      "contact": "9825097565",
+      "email": "customer91@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 55
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 39267,
+      "daysToConversion": 33,
+      "outcomeDate": "2025-12-12T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_92",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "NEW",
+    "probability": 58,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 2,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 92",
+      "contact": "9894792902",
+      "email": "customer92@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 53
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-29T18:30:00.000Z",
+      "lostReason": "Price too high"
+    }
+  },
+  {
+    "_id": "test_93",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 77,
+    "notes": "Detailed inquiry for Modular Kitchen. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 5,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 93 Premium",
+      "contact": "+91-9825082055",
+      "email": "customer93@company.com",
+      "address": "54 Business Park, Bangalore - 56054",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 91
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 78803,
+      "daysToConversion": 7,
+      "outcomeDate": "2025-12-01T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_94",
+    "organization": "test_org",
+    "leadPlatform": "Google Ads",
+    "leadStatus": "NEW",
+    "probability": 31,
+    "notes": "price?",
+    "items": [
+      {
+        "description": "Dining",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Person 94",
+      "contact": "16493363",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 35
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "LOST",
+      "convertedToQuotation": false,
+      "convertedToOrder": false,
+      "orderValue": null,
+      "daysToConversion": null,
+      "outcomeDate": "2025-12-11T18:30:00.000Z",
+      "lostReason": "No budget"
+    }
+  },
+  {
+    "_id": "test_95",
+    "organization": "test_org",
+    "leadPlatform": "Walk-in",
+    "leadStatus": "CONTACTED",
+    "probability": 83,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 9,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 95 Premium",
+      "contact": "+91-9835141281",
+      "email": "customer95@company.com",
+      "address": "267 Business Park, Bangalore - 56066",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 94
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 105960,
+      "daysToConversion": 8,
+      "outcomeDate": "2025-12-21T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_96",
+    "organization": "test_org",
+    "leadPlatform": "WhatsApp",
+    "leadStatus": "CONTACTED",
+    "probability": 56,
+    "notes": "Interested in Modular Kitchen. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Modular Kitchen",
+        "quantity": 3,
+        "meta": {
+          "details": "Full kitchen setup with cabinets and countertop"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 96",
+      "contact": "9892703737",
+      "email": "customer96@email.com",
+      "address": "Bangalore area",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 55
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 55813,
+      "daysToConversion": 10,
+      "outcomeDate": "2025-12-25T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_97",
+    "organization": "test_org",
+    "leadPlatform": "Instagram",
+    "leadStatus": "NEW",
+    "probability": 59,
+    "notes": "Interested in Bedroom Wardrobe. Please provide quotation with price details.",
+    "items": [
+      {
+        "description": "Bedroom Wardrobe",
+        "quantity": 1,
+        "meta": {
+          "details": "Sliding door wardrobe with mirror"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 97",
+      "contact": "9890556972",
+      "email": "customer97@email.com",
+      "address": "",
+      "enquiryDate": "2025-12-12",
+      "priority": "medium",
+      "aiScore": 64
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 43088,
+      "daysToConversion": 49,
+      "outcomeDate": "2025-12-21T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_98",
+    "organization": "test_org",
+    "leadPlatform": "Other",
+    "leadStatus": "NEW",
+    "probability": 20,
+    "notes": "Looking for cheap furniture",
+    "items": [
+      {
+        "description": "Custom",
+        "quantity": 1,
+        "meta": {
+          "details": ""
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "",
+      "contact": "522469443",
+      "email": "",
+      "address": "",
+      "priority": "low",
+      "aiScore": 44
+    },
+    "attachments": [],
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": false,
+      "convertedToOrder": true,
+      "orderValue": 11627,
+      "daysToConversion": 74,
+      "outcomeDate": "2025-11-30T18:30:00.000Z",
+      "lostReason": null
+    }
+  },
+  {
+    "_id": "test_99",
+    "organization": "test_org",
+    "leadPlatform": "Referral",
+    "leadStatus": "CONTACTED",
+    "probability": 84,
+    "notes": "Detailed inquiry for Living Room Sofa. Customer has approved budget and timeline. Looking for premium quality with warranty. Previously purchased from us. Need delivery within 2 months. Budget range is 50k-100k.",
+    "items": [
+      {
+        "description": "Living Room Sofa",
+        "quantity": 6,
+        "meta": {
+          "details": "L-shaped fabric sofa with cushions - Premium finish, custom dimensions, includes installation"
+        }
+      }
+    ],
+    "meta": {
+      "customerName": "Customer 99 Premium",
+      "contact": "+91-9862540745",
+      "email": "customer99@company.com",
+      "address": "483 Business Park, Bangalore - 56031",
+      "enquiryDate": "2025-12-12",
+      "enquiryTime": "10:30 AM",
+      "priority": "high",
+      "aiScore": 90
+    },
+    "attachments": [
+      "requirements.pdf",
+      "floor-plan.jpg"
+    ],
+    "customer": "existing_customer",
+    "conversionTracking": {
+      "finalOutcome": "CONVERTED",
+      "convertedToQuotation": true,
+      "convertedToOrder": true,
+      "orderValue": 185723,
+      "daysToConversion": 8,
+      "outcomeDate": "2025-12-07T18:30:00.000Z",
+      "lostReason": null
+    }
+  }
+]

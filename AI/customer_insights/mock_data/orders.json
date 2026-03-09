@@ -1,0 +1,585 @@
+[
+    {
+        "order_id": "ORD001",
+        "customer_id": "CUST001",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "Soft Close Hinges",
+            "LED Lighting",
+            "Chimney Hood"
+        ],
+        "amount": 125000,
+        "date": "2023-06-15"
+    },
+    {
+        "order_id": "ORD002",
+        "customer_id": "CUST002",
+        "category": "Wardrobe",
+        "material": "Walnut Veneer",
+        "custom_options": [
+            "Full Mirror",
+            "Sliding Doors"
+        ],
+        "amount": 95000,
+        "date": "2023-08-22"
+    },
+    {
+        "order_id": "ORD003",
+        "customer_id": "CUST003",
+        "category": "Office Furniture",
+        "material": "Teak Wood",
+        "custom_options": [
+            "Leather Upholstery",
+            "Cable Management"
+        ],
+        "amount": 145000,
+        "date": "2023-03-10"
+    },
+    {
+        "order_id": "ORD004",
+        "customer_id": "CUST004",
+        "category": "TV Unit",
+        "material": "Glossy White Laminate",
+        "custom_options": [
+            "Cable Management",
+            "LED Backlight"
+        ],
+        "amount": 65000,
+        "date": "2023-07-18"
+    },
+    {
+        "order_id": "ORD005",
+        "customer_id": "CUST005",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "Soft Close",
+            "LED Lighting",
+            "Granite Countertop"
+        ],
+        "amount": 135000,
+        "date": "2023-04-05"
+    },
+    {
+        "order_id": "ORD006",
+        "customer_id": "CUST006",
+        "category": "Storage Units",
+        "material": "Oak Veneer",
+        "custom_options": [
+            "Sliding Doors",
+            "Adjustable Shelves"
+        ],
+        "amount": 75000,
+        "date": "2023-09-12"
+    },
+    {
+        "order_id": "ORD007",
+        "customer_id": "CUST007",
+        "category": "Modular Kitchen",
+        "material": "Teak Wood",
+        "custom_options": [
+            "Island Counter",
+            "Built-in Appliances"
+        ],
+        "amount": 185000,
+        "date": "2023-02-20"
+    },
+    {
+        "order_id": "ORD008",
+        "customer_id": "CUST008",
+        "category": "Wardrobe",
+        "material": "Acrylic Finish",
+        "custom_options": [
+            "Sliding Wardrobe",
+            "Mirror Panels"
+        ],
+        "amount": 85000,
+        "date": "2023-05-30"
+    },
+    {
+        "order_id": "ORD009",
+        "customer_id": "CUST009",
+        "category": "Office Furniture",
+        "material": "Laminate",
+        "custom_options": [
+            "Modular Desk",
+            "Ergonomic Chair"
+        ],
+        "amount": 105000,
+        "date": "2023-06-25"
+    },
+    {
+        "order_id": "ORD010",
+        "customer_id": "CUST010",
+        "category": "TV Unit",
+        "material": "Walnut Veneer",
+        "custom_options": [
+            "Floating Design",
+            "Cable Tray"
+        ],
+        "amount": 55000,
+        "date": "2023-08-08"
+    },
+    {
+        "order_id": "ORD011",
+        "customer_id": "CUST011",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "Chimney Hood",
+            "Quartz Countertop"
+        ],
+        "amount": 155000,
+        "date": "2023-04-18"
+    },
+    {
+        "order_id": "ORD012",
+        "customer_id": "CUST003",
+        "category": "Office Furniture",
+        "material": "Premium Wood",
+        "custom_options": [
+            "Executive Desk",
+            "Bookshelf"
+        ],
+        "amount": 125000,
+        "date": "2023-10-15"
+    },
+    {
+        "order_id": "ORD013",
+        "customer_id": "CUST005",
+        "category": "Wardrobe",
+        "material": "Walnut",
+        "custom_options": [
+            "Drawer Units",
+            "Soft Close"
+        ],
+        "amount": 95000,
+        "date": "2024-01-20"
+    },
+    {
+        "order_id": "ORD014",
+        "customer_id": "CUST007",
+        "category": "Wardrobe",
+        "material": "Teak Finish",
+        "custom_options": [
+            "Walk-in Closet",
+            "LED Lighting"
+        ],
+        "amount": 165000,
+        "date": "2024-02-10"
+    },
+    {
+        "order_id": "ORD015",
+        "customer_id": "CUST001",
+        "category": "Storage Units",
+        "material": "Matte Laminate",
+        "custom_options": [
+            "Wall Mount",
+            "Handleless"
+        ],
+        "amount": 45000,
+        "date": "2024-03-05"
+    },
+    {
+        "order_id": "ORD016",
+        "customer_id": "CUST012",
+        "category": "Wardrobe",
+        "material": "White Laminate",
+        "custom_options": [
+            "Drawer Units",
+            "Hanging Space"
+        ],
+        "amount": 85000,
+        "date": "2023-07-05"
+    },
+    {
+        "order_id": "ORD017",
+        "customer_id": "CUST004",
+        "category": "Storage Units",
+        "material": "Oak",
+        "custom_options": [
+            "Modular Cabinets"
+        ],
+        "amount": 65000,
+        "date": "2024-04-12"
+    },
+    {
+        "order_id": "ORD018",
+        "customer_id": "CUST009",
+        "category": "Office Furniture",
+        "material": "Laminate",
+        "custom_options": [
+            "Standing Desk",
+            "Monitor Arm"
+        ],
+        "amount": 95000,
+        "date": "2024-05-08"
+    },
+    {
+        "order_id": "ORD019",
+        "customer_id": "CUST002",
+        "category": "TV Unit",
+        "material": "Walnut",
+        "custom_options": [
+            "Wall Mount",
+            "Open Shelving"
+        ],
+        "amount": 90000,
+        "date": "2024-09-10"
+    },
+    {
+        "order_id": "ORD020",
+        "customer_id": "CUST008",
+        "category": "Storage Units",
+        "material": "White Laminate",
+        "custom_options": [
+            "Sliding Doors"
+        ],
+        "amount": 55000,
+        "date": "2024-05-15"
+    },
+    {
+        "order_id": "ORD021",
+        "customer_id": "CUST006",
+        "category": "Wardrobe",
+        "material": "Oak Finish",
+        "custom_options": [
+            "Mirror Doors"
+        ],
+        "amount": 70000,
+        "date": "2024-07-08"
+    },
+    {
+        "order_id": "ORD022",
+        "customer_id": "CUST011",
+        "category": "Storage Units",
+        "material": "Oak",
+        "custom_options": [
+            "Wall Shelves"
+        ],
+        "amount": 38000,
+        "date": "2024-06-20"
+    },
+    {
+        "order_id": "ORD023",
+        "customer_id": "CUST007",
+        "category": "Office Furniture",
+        "material": "Teak",
+        "custom_options": [
+            "Conference Table"
+        ],
+        "amount": 135000,
+        "date": "2024-07-25"
+    },
+    {
+        "order_id": "ORD024",
+        "customer_id": "CUST003",
+        "category": "Storage Units",
+        "material": "Walnut",
+        "custom_options": [
+            "Display Cabinet"
+        ],
+        "amount": 65000,
+        "date": "2024-08-10"
+    },
+    {
+        "order_id": "ORD025",
+        "customer_id": "CUST010",
+        "category": "Storage Units",
+        "material": "Matte Black",
+        "custom_options": [
+            "Customized Shelving"
+        ],
+        "amount": 140000,
+        "date": "2024-08-15"
+    },
+    {
+        "order_id": "ORD026",
+        "customer_id": "CUST005",
+        "category": "TV Unit",
+        "material": "Glossy White",
+        "custom_options": [
+            "LED Backlight"
+        ],
+        "amount": 75000,
+        "date": "2024-08-28"
+    },
+    {
+        "order_id": "ORD027",
+        "customer_id": "CUST013",
+        "category": "Office Furniture",
+        "material": "Premium Leather",
+        "custom_options": [
+            "Conference Table",
+            "Chairs"
+        ],
+        "amount": 185000,
+        "date": "2023-03-28"
+    },
+    {
+        "order_id": "ORD028",
+        "customer_id": "CUST001",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "Island Counter",
+            "Quartz Top"
+        ],
+        "amount": 155000,
+        "date": "2024-10-20"
+    },
+    {
+        "order_id": "ORD029",
+        "customer_id": "CUST009",
+        "category": "Storage Units",
+        "material": "Oak",
+        "custom_options": [
+            "File Cabinet"
+        ],
+        "amount": 115000,
+        "date": "2024-10-30"
+    },
+    {
+        "order_id": "ORD030",
+        "customer_id": "CUST004",
+        "category": "TV Unit",
+        "material": "Walnut",
+        "custom_options": [
+            "Floating Design",
+            "Cable Management"
+        ],
+        "amount": 165000,
+        "date": "2024-08-25"
+    },
+    {
+        "order_id": "ORD031",
+        "customer_id": "CUST007",
+        "category": "TV Unit",
+        "material": "Teak",
+        "custom_options": [
+            "Built-in Storage"
+        ],
+        "amount": 95000,
+        "date": "2024-09-18"
+    },
+    {
+        "order_id": "ORD032",
+        "customer_id": "CUST012",
+        "category": "Storage Units",
+        "material": "White Finish",
+        "custom_options": [
+            "Drawer Units"
+        ],
+        "amount": 80000,
+        "date": "2024-09-18"
+    },
+    {
+        "order_id": "ORD033",
+        "customer_id": "CUST008",
+        "category": "TV Unit",
+        "material": "Acrylic",
+        "custom_options": [
+            "LED Backlight"
+        ],
+        "amount": 85000,
+        "date": "2024-09-22"
+    },
+    {
+        "order_id": "ORD034",
+        "customer_id": "CUST011",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "L-Shaped Layout"
+        ],
+        "amount": 192000,
+        "date": "2024-11-02"
+    },
+    {
+        "order_id": "ORD035",
+        "customer_id": "CUST003",
+        "category": "Office Furniture",
+        "material": "Teak",
+        "custom_options": [
+            "CEO Desk",
+            "Premium Finish"
+        ],
+        "amount": 185000,
+        "date": "2024-11-05"
+    },
+    {
+        "order_id": "ORD036",
+        "customer_id": "CUST013",
+        "category": "Wardrobe",
+        "material": "Walnut",
+        "custom_options": [
+            "Walk-in",
+            "Mirror Panels"
+        ],
+        "amount": 175000,
+        "date": "2024-09-15"
+    },
+    {
+        "order_id": "ORD037",
+        "customer_id": "CUST005",
+        "category": "Storage Units",
+        "material": "Oak",
+        "custom_options": [
+            "Wall Units"
+        ],
+        "amount": 105000,
+        "date": "2024-10-12"
+    },
+    {
+        "order_id": "ORD038",
+        "customer_id": "CUST014",
+        "category": "Storage Units",
+        "material": "Matte Laminate",
+        "custom_options": [
+            "Handleless Design",
+            "Soft Close"
+        ],
+        "amount": 275000,
+        "date": "2024-10-05"
+    },
+    {
+        "order_id": "ORD039",
+        "customer_id": "CUST007",
+        "category": "Storage Units",
+        "material": "Teak",
+        "custom_options": [
+            "Display Units"
+        ],
+        "amount": 95000,
+        "date": "2024-11-18"
+    },
+    {
+        "order_id": "ORD040",
+        "customer_id": "CUST013",
+        "category": "Office Furniture",
+        "material": "Premium Wood",
+        "custom_options": [
+            "Executive Suite"
+        ],
+        "amount": 180000,
+        "date": "2024-11-10"
+    },
+    {
+        "order_id": "ORD041",
+        "customer_id": "CUST015",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "Island Counter",
+            "Granite Top"
+        ],
+        "amount": 225000,
+        "date": "2024-09-12"
+    },
+    {
+        "order_id": "ORD042",
+        "customer_id": "CUST015",
+        "category": "Wardrobe",
+        "material": "Walnut",
+        "custom_options": [
+            "Sliding Wardrobe",
+            "LED Lighting"
+        ],
+        "amount": 220000,
+        "date": "2024-11-20"
+    },
+    {
+        "order_id": "ORD043",
+        "customer_id": "CUST016",
+        "category": "TV Unit",
+        "material": "Matte Black",
+        "custom_options": [
+            "Open Shelving",
+            "Cable Tray"
+        ],
+        "amount": 125000,
+        "date": "2024-08-20"
+    },
+    {
+        "order_id": "ORD044",
+        "customer_id": "CUST017",
+        "category": "Wardrobe",
+        "material": "Oak",
+        "custom_options": [
+            "Sliding Wardrobe"
+        ],
+        "amount": 175000,
+        "date": "2024-07-15"
+    },
+    {
+        "order_id": "ORD045",
+        "customer_id": "CUST017",
+        "category": "Storage Units",
+        "material": "Walnut",
+        "custom_options": [
+            "Mirror Panels",
+            "Drawer Units"
+        ],
+        "amount": 180000,
+        "date": "2024-10-28"
+    },
+    {
+        "order_id": "ORD046",
+        "customer_id": "CUST018",
+        "category": "Office Furniture",
+        "material": "Laminate",
+        "custom_options": [
+            "Standing Desk",
+            "Cable Tray"
+        ],
+        "amount": 265000,
+        "date": "2024-09-05"
+    },
+    {
+        "order_id": "ORD047",
+        "customer_id": "CUST019",
+        "category": "Modular Kitchen",
+        "material": "Marine Plywood",
+        "custom_options": [
+            "U-Shaped Layout",
+            "Built-in Appliances"
+        ],
+        "amount": 245000,
+        "date": "2024-06-10"
+    },
+    {
+        "order_id": "ORD048",
+        "customer_id": "CUST019",
+        "category": "Storage Units",
+        "material": "Oak",
+        "custom_options": [
+            "Display Cabinet"
+        ],
+        "amount": 240000,
+        "date": "2024-11-15"
+    },
+    {
+        "order_id": "ORD049",
+        "customer_id": "CUST020",
+        "category": "Storage Units",
+        "material": "Walnut",
+        "custom_options": [
+            "Customized Shelving"
+        ],
+        "amount": 195000,
+        "date": "2024-08-01"
+    },
+    {
+        "order_id": "ORD050",
+        "customer_id": "CUST020",
+        "category": "Wardrobe",
+        "material": "Teak",
+        "custom_options": [
+            "Walk-in Closet",
+            "Mirror Doors"
+        ],
+        "amount": 200000,
+        "date": "2024-11-08"
+    }
+]

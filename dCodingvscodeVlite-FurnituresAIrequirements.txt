@@ -1,0 +1,18 @@
+# Core dependencies (existing)
+python-dotenv
+requests
+
+# YOLO and Computer Vision dependencies
+ultralytics>=8.0.0
+opencv-python-headless>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# OCR dependencies
+easyocr>=1.7.0
+
+# Spatial analysis dependencies
+shapely>=2.0.0
+
+# PDF processing (if not already installed)
+PyMuPDF>=1.23.0

@@ -1,0 +1,36 @@
+{
+    "use_mock_data": true,
+    "python_path": "python3",
+    "api_prefix": "/smart-automation",
+    "rules": {
+        "quotation_approved": {
+            "enabled": true,
+            "priority": 1
+        },
+        "low_stock": {
+            "enabled": true,
+            "priority": 2
+        },
+        "new_inquiry": {
+            "enabled": true,
+            "priority": 3
+        },
+        "production_completed": {
+            "enabled": true,
+            "priority": 4
+        },
+        "machine_overuse": {
+            "enabled": true,
+            "priority": 5
+        }
+    },
+    "notification_settings": {
+        "email_enabled": false,
+        "slack_enabled": false,
+        "in_app_enabled": true
+    },
+    "logging": {
+        "max_logs": 1000,
+        "log_level": "info"
+    }
+}

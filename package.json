@@ -1,0 +1,18 @@
+{
+  "name": "vlite-furnitures-multitenant",
+  "version": "2.0.0",
+  "description": "Multi-tenant ERP system for furniture manufacturing",
+  "scripts": {
+    "setup": "echo Run SETUP_MULTITENANT.bat (Windows) or bash SETUP_MULTITENANT.sh (Mac/Linux)",
+    "create-superadmin": "cd backend && node scripts/createSuperAdmin.js",
+    "create-demo-orgs": "cd backend && node scripts/createDemoData.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:admin": "cd frontend-admin && npm run dev",
+    "dev:org": "cd frontend-org && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend-admin && npm install && cd ../frontend-org && npm install"
+  },
+  "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "motion": "^12.23.26"
+  }
+}

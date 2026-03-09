@@ -1,0 +1,33 @@
+{
+    "categories": {
+        "Modular Kitchen": 12,
+        "Wardrobe": 11,
+        "Office Furniture": 9,
+        "TV Unit": 8,
+        "Storage Units": 10
+    },
+    "materials": {
+        "Marine Plywood": 8,
+        "Walnut": 10,
+        "Teak Wood": 7,
+        "Oak": 8,
+        "Laminate": 6,
+        "Acrylic": 3,
+        "Matte Finish": 4,
+        "Glossy Finish": 4
+    },
+    "custom_options": {
+        "Soft Close Hinges": 6,
+        "LED Lighting": 8,
+        "Cable Management": 7,
+        "Sliding Doors": 9,
+        "Mirror Panels": 7,
+        "Drawer Units": 6,
+        "Island Counter": 4,
+        "Built-in Appliances": 3,
+        "Handleless Design": 3,
+        "Floating Design": 3,
+        "Quartz Countertop": 3,
+        "Granite Countertop": 2
+    }
+}

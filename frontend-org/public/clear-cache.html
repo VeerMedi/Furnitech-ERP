@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Cache - Vlite ERP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #b91c1c;
+        }
+        .success {
+            color: #10b981;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .info {
+            color: #666;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧹 Clear All Cache</h1>
+        <p class="info">This will clear all cached vendor and price book data from your browser.</p>
+        
+        <button onclick="clearCache()">Clear Cache</button>
+        <button onclick="goToDashboard()">Go to Dashboard</button>
+        
+        <div id="result"></div>
+        
+        <div class="info" style="margin-top: 30px;">
+            <strong>Cache items found:</strong>
+            <div id="cacheItems" style="margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <script>
+        function showCacheItems() {
+            const items = [];
+            const keys = Object.keys(localStorage);
+            
+            keys.forEach(key => {
+                if (key.includes('vendor') || key.includes('price') || key.includes('material')) {
+                    try {
+                        const data = JSON.parse(localStorage.getItem(key));
+                        if (Array.isArray(data)) {
+                            items.push(`${key}: ${data.length} items`);
+                        } else {
+                            items.push(key);
+                        }
+                    } catch {
+                        items.push(key);
+                    }
+                }
+            });
+            
+            const cacheDiv = document.getElementById('cacheItems');
+            if (items.length > 0) {
+                cacheDiv.innerHTML = items.map(item => `<div style="color: #dc2626;">${item}</div>`).join('');
+            } else {
+                cacheDiv.innerHTML = '<div style="color: #10b981;">No cache found! ✅</div>';
+            }
+        }
+
+        function clearCache() {
+            // Clear all localStorage
+            localStorage.clear();
+            
+            // Also clear sessionStorage
+            sessionStorage.clear();
+            
+            // Show success message
+            document.getElementById('result').innerHTML = '<div class="success">✅ Cache cleared successfully!</div>';
+            
+            // Refresh cache items display
+            setTimeout(showCacheItems, 100);
+        }
+
+        function goToDashboard() {
+            window.location.href = '/';
+        }
+
+        // Show cache items on load
+        showCacheItems();
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+{
+  "suggestions": [
+    {
+      "id": "SUG-20251216164210",
+      "message": "Quotation Q-101 has been approved. Would you like to create a Production Order?",
+      "action": "create_production_order",
+      "entity_id": "Q-101",
+      "entity_type": "quotation",
+      "role": "PRODUCTION",
+      "metadata": {
+        "customer_name": "Rajesh Sharma",
+        "total_value": 125000,
+        "items_count": 2,
+        "items": [
+          {
+            "id": "ITEM-001",
+            "product": "Modular Kitchen",
+            "category": "Kitchen",
+            "material": "Marine Plywood",
+            "quantity": 1,
+            "unit_price": 85000,
+            "total": 85000,
+            "specifications": {
+              "length": "10 ft",
+              "height": "8 ft",
+              "custom_options": [
+                "Soft Close",
+                "LED Lighting",
+                "Pull-out Drawers"
+              ]
+            }
+          },
+          {
+            "id": "ITEM-002",
+            "product": "Dining Table",
+            "category": "Furniture",
+            "material": "Teak",
+            "quantity": 1,
+            "unit_price": 40000,
+            "total": 40000,
+            "specifications": {
+              "dimensions": "6ft x 3ft",
+              "custom_options": [
+                "Glass Top",
+                "Foldable"
+              ]
+            }
+          }
+        ]
+      },
+      "status": "confirmed",
+      "created_at": "2025-12-16T16:42:10.741187",
+      "priority": "medium",
+      "confirmed_at": "2025-12-16T16:43:35.589658"
+    },
+    {
+      "id": "SUG-20251216164335",
+      "message": "Quotation Q-103 has been approved. Would you like to create a Production Order?",
+      "action": "create_production_order",
+      "entity_id": "Q-103",
+      "entity_type": "quotation",
+      "role": "PRODUCTION",
+      "metadata": {
+        "customer_name": "Amit Kumar",
+        "total_value": 130000,
+        "items_count": 2,
+        "items": [
+          {
+            "id": "ITEM-004",
+            "product": "Office Desk",
+            "category": "Office Furniture",
+            "material": "Oak",
+            "quantity": 5,
+            "unit_price": 18000,
+            "total": 90000,
+            "specifications": {
+              "dimensions": "5ft x 2.5ft",
+              "custom_options": [
+                "Cable Management",
+                "Drawer Unit"
+              ]
+            }
+          },
+          {
+            "id": "ITEM-005",
+            "product": "Office Chair",
+            "category": "Office Furniture",
+            "material": "Fabric/Metal",
+            "quantity": 5,
+            "unit_price": 8000,
+            "total": 40000,
+            "specifications": {
+              "type": "Ergonomic",
+              "custom_options": [
+                "Lumbar Support",
+                "Adjustable Height"
+              ]
+            }
+          }
+        ]
+      },
+      "status": "confirmed",
+      "created_at": "2025-12-16T16:43:35.588809",
+      "priority": "medium",
+      "confirmed_at": "2025-12-17T16:54:40.740737"
+    },
+    {
+      "id": "SUG-20251216165108",
+      "message": "Quotation Q-101 has been approved. Would you like to create a Production Order?",
+      "action": "create_production_order",
+      "entity_id": "Q-101",
+      "entity_type": "quotation",
+      "role": "PRODUCTION",
+      "metadata": {
+        "customer_name": "Rajesh Sharma",
+        "total_value": 125000,
+        "items_count": 2,
+        "items": [
+          {
+            "id": "ITEM-001",
+            "product": "Modular Kitchen",
+            "category": "Kitchen",
+            "material": "Marine Plywood",
+            "quantity": 1,
+            "unit_price": 85000,
+            "total": 85000,
+            "specifications": {
+              "length": "10 ft",
+              "height": "8 ft",
+              "custom_options": [
+                "Soft Close",
+                "LED Lighting",
+                "Pull-out Drawers"
+              ]
+            }
+          },
+          {
+            "id": "ITEM-002",
+            "product": "Dining Table",
+            "category": "Furniture",
+            "material": "Teak",
+            "quantity": 1,
+            "unit_price": 40000,
+            "total": 40000,
+            "specifications": {
+              "dimensions": "6ft x 3ft",
+              "custom_options": [
+                "Glass Top",
+                "Foldable"
+              ]
+            }
+          }
+        ]
+      },
+      "status": "pending",
+      "created_at": "2025-12-16T16:51:08.480148",
+      "priority": "medium"
+    },
+    {
+      "id": "SUG-20251216165532",
+      "message": "Machine CNC Router M2 has exceeded maintenance threshold (245 hours). Create Maintenance Ticket?",
+      "action": "create_maintenance_ticket",
+      "entity_id": "MCH-001",
+      "entity_type": "machine",
+      "role": "PM",
+      "metadata": {
+        "machine_name": "CNC Router M2",
+        "machine_id": "MCH-001",
+        "run_hours": 245,
+        "maintenance_threshold": 200,
+        "last_maintenance": "2024-11-01",
+        "hours_over_threshold": 45
+      },
+      "status": "confirmed",
+      "created_at": "2025-12-16T16:55:32.538455",
+      "priority": "high",
+      "confirmed_at": "2025-12-16T17:30:58.818603"
+    }
+  ]
+}

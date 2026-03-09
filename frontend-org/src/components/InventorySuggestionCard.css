@@ -1,0 +1,261 @@
+.inventory-suggestion-card {
+  position: relative;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0;
+  animation: slideInRight 0.3s ease-out;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.inventory-suggestion-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Close Button */
+.suggestion-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+.suggestion-close-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #374151;
+}
+
+/* Header */
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.suggestion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestion-priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Message */
+.suggestion-message {
+  font-size: 15px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Details */
+.suggestion-details {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #f3f4f6;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 13px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Actions */
+.suggestion-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.suggestion-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-btn-confirm {
+  background: hsl(349, 66%, 35%);
+  color: white;
+}
+
+.suggestion-btn-confirm:hover {
+  background: hsl(349, 66%, 40%);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.suggestion-btn-ignore {
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+}
+
+.suggestion-btn-ignore:hover {
+  background: #f9fafb;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+/* Timestamp */
+.suggestion-timestamp {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Settings Button */
+.suggestion-settings-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-settings-btn:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+.detail-input {
+  width: 90px;
+  padding: 4px 8px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: right;
+  transition: all 0.2s;
+}
+
+.detail-input:focus {
+  outline: none;
+  border-color: hsl(349, 66%, 35%);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Edit Controls */
+.suggestion-edit-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.edit-btn-save {
+  background: #10b981;
+  color: white;
+}
+
+.edit-btn-save:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.edit-btn-cancel {
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+}
+
+.edit-btn-cancel:hover:not(:disabled) {
+  background: #f9fafb;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.edit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug - Vlite Frontend</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        button { margin: 5px; padding: 10px 20px; cursor: pointer; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Vlite Frontend Debug Tool</h1>
+    
+    <div class="section">
+        <h2>1. Check LocalStorage</h2>
+        <button onclick="checkLocalStorage()">Check Token</button>
+        <pre id="localStorage-result"></pre>
+    </div>
+
+    <div class="section">
+        <h2>2. Test Login</h2>
+        <button onclick="testLogin()">Test Login API</button>
+        <pre id="login-result"></pre>
+    </div>
+
+    <div class="section">
+        <h2>3. Test Fetch Materials</h2>
+        <button onclick="testFetchMaterials()">Fetch Materials</button>
+        <pre id="fetch-result"></pre>
+    </div>
+
+    <div class="section">
+        <h2>4. Test Dashboard Stats</h2>
+        <button onclick="testDashboardStats()">Fetch Dashboard Stats</button>
+        <pre id="stats-result"></pre>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5001/api';
+
+        function checkLocalStorage() {
+            const token = localStorage.getItem('orgToken');
+            const user = localStorage.getItem('orgUser');
+            const tenantId = localStorage.getItem('tenantId');
+            
+            const result = {
+                token: token ? `${token.substring(0, 50)}...` : 'NOT FOUND',
+                user: user ? JSON.parse(user) : 'NOT FOUND',
+                tenantId: tenantId || 'NOT FOUND'
+            };
+            
+            document.getElementById('localStorage-result').textContent = JSON.stringify(result, null, 2);
+        }
+
+        async function testLogin() {
+            try {
+                const response = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: 'jasleen@vlite.com',
+                        password: 'krishna@123',
+                        organizationId: '692d83043ffecb29abbfc795'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    localStorage.setItem('orgToken', data.token);
+                    localStorage.setItem('orgUser', JSON.stringify(data.user));
+                    localStorage.setItem('tenantId', data.user.organizationId);
+                    document.getElementById('login-result').innerHTML = 
+                        `<span class="success">✓ Login successful!</span>\n${JSON.stringify(data, null, 2)}`;
+                } else {
+                    document.getElementById('login-result').innerHTML = 
+                        `<span class="error">✗ Login failed</span>\n${JSON.stringify(data, null, 2)}`;
+                }
+            } catch (error) {
+                document.getElementById('login-result').innerHTML = 
+                    `<span class="error">✗ Error: ${error.message}</span>`;
+            }
+        }
+
+        async function testFetchMaterials() {
+            const token = localStorage.getItem('orgToken');
+            if (!token) {
+                document.getElementById('fetch-result').innerHTML = 
+                    '<span class="error">✗ No token found. Please login first.</span>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/rawmaterial`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    document.getElementById('fetch-result').innerHTML = 
+                        `<span class="success">✓ Fetched ${data.count} materials</span>\n${JSON.stringify({
+                            success: data.success,
+                            count: data.count,
+                            firstMaterial: data.data[0]
+                        }, null, 2)}`;
+                } else {
+                    document.getElementById('fetch-result').innerHTML = 
+                        `<span class="error">✗ Failed</span>\n${JSON.stringify(data, null, 2)}`;
+                }
+            } catch (error) {
+                document.getElementById('fetch-result').innerHTML = 
+                    `<span class="error">✗ Error: ${error.message}</span>`;
+            }
+        }
+
+        async function testDashboardStats() {
+            const token = localStorage.getItem('orgToken');
+            if (!token) {
+                document.getElementById('stats-result').innerHTML = 
+                    '<span class="error">✗ No token found. Please login first.</span>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/rawmaterial/stats/dashboard`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    document.getElementById('stats-result').innerHTML = 
+                        `<span class="success">✓ Stats fetched successfully</span>\n${JSON.stringify(data, null, 2)}`;
+                } else {
+                    document.getElementById('stats-result').innerHTML = 
+                        `<span class="error">✗ Failed</span>\n${JSON.stringify(data, null, 2)}`;
+                }
+            } catch (error) {
+                document.getElementById('stats-result').innerHTML = 
+                    `<span class="error">✗ Error: ${error.message}</span>`;
+            }
+        }
+
+        // Auto-check localStorage on load
+        window.onload = checkLocalStorage;
+    </script>
+</body>
+</html>

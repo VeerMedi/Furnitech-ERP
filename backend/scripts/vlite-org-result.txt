@@ -1,0 +1,74 @@
+✓ Connected to MongoDB
+
+📊 All Organizations in Database:
+================================================================================
+
+1. Vlite Furnitures
+   ID: 6935417d57433de522df0bbe
+   Slug: vlite-furnitures
+   Email: admin@vlite.com
+   Active: true
+   Status: ACTIVE
+   Database: vlite_vlite-furnitures_1765097853502
+
+2. independent
+   ID: 6940fb580756b4542f004b13
+   Slug: independent
+   Email: veermediwala@gmail.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_independent_1765866328936
+
+3. THH
+   ID: 69410ba345d61622c40214e9
+   Slug: thh
+   Email: thh@vlite.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_thh_1765870499877
+
+4. ourabh
+   ID: 6941158232d5000465fddf06
+   Slug: ourabh
+   Email: ourabh@vlite.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_ourabh_1765873026293
+
+5. ishanThh
+   ID: 69412c476682de1cc2ce3a98
+   Slug: ishan-thh
+   Email: ishan@thh.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_ishan-thh_1765878855144
+
+6. Akatva  Jain
+   ID: 6950b545f3e95eb6303cceb9
+   Slug: akatva-jain
+   Email: jakatva@gmail.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_akatva-jain_1766896965814
+
+7. Furniture
+   ID: 69620c04924c137af5c15650
+   Slug: furniture-
+   Email: junab@gmail.com
+   Active: false
+   Status: CANCELLED
+   Database: vlite_furniture-_1768033284153
+
+================================================================================
+
+✅ FOUND VLITE ORGANIZATION:
+   Name: Vlite Furnitures
+   ID: 6935417d57433de522df0bbe
+   Slug: vlite-furnitures
+   Database: vlite_vlite-furnitures_1765097853502
+
+📝 Add these to your .env file:
+VLITE_ORG_ID=6935417d57433de522df0bbe
+VLITE_ORG_SLUG=vlite-furnitures
+
+================================================================================

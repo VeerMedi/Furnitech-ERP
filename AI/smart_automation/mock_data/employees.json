@@ -1,0 +1,272 @@
+[
+    {
+        "id": "EMP001",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Modular Furniture",
+            "Office Solutions",
+            "Custom Woodwork"
+        ],
+        "workload": {
+            "pending_tasks": 5,
+            "active_quotations": 3,
+            "open_leads": 8
+        },
+        "performance": {
+            "conversion_rate": 0.68,
+            "avg_response_hours": 4.2,
+            "total_deals_closed": 45,
+            "customer_satisfaction": 4.5
+        },
+        "capacity": {
+            "max_concurrent_leads": 15,
+            "availability": "available"
+        },
+        "region": "North India"
+    },
+    {
+        "id": "EMP002",
+        "name": "Priya Sharma",
+        "email": "priya.sharma@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Retail Fixtures",
+            "Display Units",
+            "Commercial Interiors"
+        ],
+        "workload": {
+            "pending_tasks": 8,
+            "active_quotations": 5,
+            "open_leads": 12
+        },
+        "performance": {
+            "conversion_rate": 0.72,
+            "avg_response_hours": 3.5,
+            "total_deals_closed": 58,
+            "customer_satisfaction": 4.7
+        },
+        "capacity": {
+            "max_concurrent_leads": 20,
+            "availability": "available"
+        },
+        "region": "West India"
+    },
+    {
+        "id": "EMP003",
+        "name": "Amit Patel",
+        "email": "amit.patel@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Home Furniture",
+            "Bedroom Sets",
+            "Living Room"
+        ],
+        "workload": {
+            "pending_tasks": 3,
+            "active_quotations": 2,
+            "open_leads": 5
+        },
+        "performance": {
+            "conversion_rate": 0.55,
+            "avg_response_hours": 6.8,
+            "total_deals_closed": 32,
+            "customer_satisfaction": 4.2
+        },
+        "capacity": {
+            "max_concurrent_leads": 12,
+            "availability": "available"
+        },
+        "region": "West India"
+    },
+    {
+        "id": "EMP004",
+        "name": "Sneha Reddy",
+        "email": "sneha.reddy@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Office Solutions",
+            "Ergonomic Furniture",
+            "Modular Furniture"
+        ],
+        "workload": {
+            "pending_tasks": 2,
+            "active_quotations": 1,
+            "open_leads": 4
+        },
+        "performance": {
+            "conversion_rate": 0.78,
+            "avg_response_hours": 2.8,
+            "total_deals_closed": 67,
+            "customer_satisfaction": 4.8
+        },
+        "capacity": {
+            "max_concurrent_leads": 18,
+            "availability": "available"
+        },
+        "region": "South India"
+    },
+    {
+        "id": "EMP005",
+        "name": "Vikram Singh",
+        "email": "vikram.singh@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Custom Woodwork",
+            "Luxury Furniture",
+            "Bespoke Designs"
+        ],
+        "workload": {
+            "pending_tasks": 6,
+            "active_quotations": 4,
+            "open_leads": 7
+        },
+        "performance": {
+            "conversion_rate": 0.62,
+            "avg_response_hours": 5.1,
+            "total_deals_closed": 41,
+            "customer_satisfaction": 4.4
+        },
+        "capacity": {
+            "max_concurrent_leads": 15,
+            "availability": "available"
+        },
+        "region": "North India"
+    },
+    {
+        "id": "EMP006",
+        "name": "Anjali Gupta",
+        "email": "anjali.gupta@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Retail Fixtures",
+            "Shop Fittings",
+            "Display Units"
+        ],
+        "workload": {
+            "pending_tasks": 10,
+            "active_quotations": 6,
+            "open_leads": 15
+        },
+        "performance": {
+            "conversion_rate": 0.65,
+            "avg_response_hours": 4.5,
+            "total_deals_closed": 52,
+            "customer_satisfaction": 4.3
+        },
+        "capacity": {
+            "max_concurrent_leads": 22,
+            "availability": "busy"
+        },
+        "region": "East India"
+    },
+    {
+        "id": "EMP007",
+        "name": "Karan Mehta",
+        "email": "karan.mehta@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Commercial Interiors",
+            "Office Solutions",
+            "Corporate Furniture"
+        ],
+        "workload": {
+            "pending_tasks": 4,
+            "active_quotations": 3,
+            "open_leads": 6
+        },
+        "performance": {
+            "conversion_rate": 0.70,
+            "avg_response_hours": 3.9,
+            "total_deals_closed": 48,
+            "customer_satisfaction": 4.6
+        },
+        "capacity": {
+            "max_concurrent_leads": 16,
+            "availability": "available"
+        },
+        "region": "West India"
+    },
+    {
+        "id": "EMP008",
+        "name": "Neha Kapoor",
+        "email": "neha.kapoor@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Home Furniture",
+            "Kitchen Cabinets",
+            "Wardrobe Systems"
+        ],
+        "workload": {
+            "pending_tasks": 7,
+            "active_quotations": 4,
+            "open_leads": 9
+        },
+        "performance": {
+            "conversion_rate": 0.60,
+            "avg_response_hours": 5.5,
+            "total_deals_closed": 38,
+            "customer_satisfaction": 4.1
+        },
+        "capacity": {
+            "max_concurrent_leads": 14,
+            "availability": "available"
+        },
+        "region": "North India"
+    },
+    {
+        "id": "EMP009",
+        "name": "Sanjay Desai",
+        "email": "sanjay.desai@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Modular Furniture",
+            "Space Planning",
+            "Smart Storage"
+        ],
+        "workload": {
+            "pending_tasks": 1,
+            "active_quotations": 1,
+            "open_leads": 2
+        },
+        "performance": {
+            "conversion_rate": 0.75,
+            "avg_response_hours": 3.2,
+            "total_deals_closed": 61,
+            "customer_satisfaction": 4.9
+        },
+        "capacity": {
+            "max_concurrent_leads": 20,
+            "availability": "available"
+        },
+        "region": "South India"
+    },
+    {
+        "id": "EMP010",
+        "name": "Divya Nair",
+        "email": "divya.nair@vlite.com",
+        "department": "Sales",
+        "specializations": [
+            "Luxury Furniture",
+            "Designer Collections",
+            "Premium Interiors"
+        ],
+        "workload": {
+            "pending_tasks": 9,
+            "active_quotations": 5,
+            "open_leads": 11
+        },
+        "performance": {
+            "conversion_rate": 0.58,
+            "avg_response_hours": 6.2,
+            "total_deals_closed": 35,
+            "customer_satisfaction": 4.0
+        },
+        "capacity": {
+            "max_concurrent_leads": 18,
+            "availability": "available"
+        },
+        "region": "South India"
+    }
+]

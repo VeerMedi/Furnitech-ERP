@@ -1,0 +1,319 @@
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AdminDrawingDashboard from './AdminDrawingDashboard';
+import DesignDeptHeadDashboard from './DesignDeptHeadDashboard';
+
+const DrawingDashboard = () => {
+    const navigate = useNavigate();
+    const [userRole, setUserRole] = useState('');
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Get user role from auth or orgUser
+        const authData = localStorage.getItem('auth');
+        const orgUser = localStorage.getItem('orgUser');
+
+        let role = '';
+        let email = '';
+
+        if (authData) {
+            try {
+                const parsed = JSON.parse(authData);
+                role = parsed.user?.userRole || '';
+                email = parsed.user?.email || '';
+            } catch (e) {
+                console.error('Failed to parse auth data:', e);
+            }
+        }
+
+        // Fallback to orgUser if role not found in auth
+        if (!role && orgUser) {
+            try {
+                const parsed = JSON.parse(orgUser);
+                role = parsed.userRole || parsed.role || '';
+                email = parsed.email || '';
+            } catch (e) {
+                console.error('Failed to parse orgUser:', e);
+            }
+        }
+
+        // 🔥 HARDCODE: jasleen@vlite.com = Admin with full access
+        if (email === 'jasleen@vlite.com') {
+            console.log('🔥 HARDCODE OVERRIDE: jasleen@vlite.com detected - Setting as Admin');
+            role = 'Admin';
+        }
+
+        console.log('🔍 DRAWING DASHBOARD - ROLE CHECK:');
+        console.log('   Email:', email);
+        console.log('   👤 Detected Role:', role);
+
+        // Redirect salesmen to their own drawing dashboard
+        if (role === 'Salesman') {
+            console.log('⚠️ Salesman detected - Redirecting to /salesman-drawings');
+            navigate('/salesman-drawings');
+            return;
+        }
+
+        setUserRole(role);
+        setLoading(false);
+    }, [navigate]);
+
+    const email = (customer.email || '').toLowerCase();
+    const search = searchTerm.toLowerCase();
+
+    return fullName.includes(search) || phone.includes(search) || email.includes(search);
+});
+setFilteredCustomers(filtered);
+        } else {
+    // Filter based on user role
+    let filtered = customers;
+
+    // If user is Design (not Design Dept Head), show only assigned customers
+    if (userRole === 'Design') {
+        const authData = localStorage.getItem('auth');
+        const orgUser = localStorage.getItem('orgUser');
+        let userId = null;
+
+        if (authData) {
+            try {
+                const parsed = JSON.parse(authData);
+                userId = parsed.user?._id || parsed.user?.id;
+            } catch (e) {
+                console.error('Failed to parse auth for userId:', e);
+            }
+        }
+
+        if (!userId && orgUser) {
+            try {
+                const parsed = JSON.parse(orgUser);
+                userId = parsed._id || parsed.id;
+            } catch (e) {
+                console.error('Failed to parse orgUser for userId:', e);
+            }
+        }
+
+        console.log('🎨 DESIGN FILTER:');
+        console.log('   User ID:', userId);
+        console.log('   Total Customers:', customers.length);
+
+        // Show only customers assigned to this designer
+        filtered = customers.filter(customer => {
+            const isAssigned = customer.assignedDesigner?._id === userId;
+            if (isAssigned) {
+                console.log('   ✅ Showing:', customer.firstName, customer.lastName);
+            }
+            return isAssigned;
+        });
+
+        console.log('   Filtered Count:', filtered.length);
+    }
+
+    setFilteredCustomers(filtered);
+}
+    }, [searchTerm, customers, userRole]);
+
+const fetchCustomers = async () => {
+    try {
+        setLoading(true);
+        const response = await drawingAPI.getCustomersFromOrders();
+        setCustomers(response.data.data || []);
+        setFilteredCustomers(response.data.data || []);
+    } catch (error) {
+        console.error('Failed to fetch customers:', error);
+        setCustomers([]);
+        setFilteredCustomers([]);
+    } finally {
+        setLoading(false);
+    }
+};
+
+const fetchDesignTeam = async () => {
+    try {
+        const response = await drawingAPI.getDesignTeam();
+        setDesignTeam(response.data.data || []);
+    } catch (error) {
+        console.error('Failed to fetch design team:', error);
+        setDesignTeam([]);
+    }
+};
+
+const handleCustomerClick = (customerId) => {
+    navigate(`/drawings/${customerId}`);
+};
+
+if (loading) {
+    return (
+        <div className="flex items-center justify-center h-screen bg-gray-50">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-700"></div>
+        </div>
+    );
+}
+
+const isDesignDeptHead = userRole === 'Design Dept Head';
+
+return (
+    <div className="min-h-screen bg-gray-50 p-6">
+        {/* Header */}
+        <div className="mb-8">
+            <div className="flex items-center gap-3 mb-2">
+                <div className="bg-red-700 p-3 rounded-lg">
+                    <FileText className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                    <h1 className="text-3xl font-bold text-gray-900">Drawing Dashboard</h1>
+                    <p className="text-gray-600 mt-1">Manage drawings and files for customers</p>
+                </div>
+            </div>
+        </div>
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-red-200">
+                <div className="flex items-center justify-between">
+                    <div>
+                        <p className="text-gray-600 text-sm font-medium mb-1">Total Customers</p>
+                        <p className="text-3xl font-bold text-gray-900">{customers.length}</p>
+                    </div>
+                    <div className="bg-blue-100 p-3 rounded-full">
+                        <Users className="w-8 h-8 text-blue-600" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-red-200">
+                <div className="flex items-center justify-between">
+                    <div>
+                        <p className="text-gray-600 text-sm font-medium mb-1">With Orders</p>
+                        <p className="text-3xl font-bold text-gray-900">{customers.length}</p>
+                    </div>
+                    <div className="bg-green-100 p-3 rounded-full">
+                        <FileText className="w-8 h-8 text-green-600" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-red-200">
+                <div className="flex items-center justify-between">
+                    <div>
+                        <p className="text-gray-600 text-sm font-medium mb-1">Filtered Results</p>
+                        <p className="text-3xl font-bold text-gray-900">{filteredCustomers.length}</p>
+                    </div>
+                    <div className="bg-purple-100 p-3 rounded-full">
+                        <Search className="w-8 h-8 text-purple-600" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="bg-white rounded-2xl p-6 shadow-lg mb-8 border border-red-200">
+            <div className="flex items-center gap-3">
+                <Search className="w-5 h-5 text-gray-400" />
+                <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Search customers by name, phone, or email..."
+                    className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none"
+                />
+            </div>
+        </div>
+
+        {/* Customer Cards Grid */}
+        {filteredCustomers.length === 0 ? (
+            <div className="bg-white rounded-2xl p-12 shadow-lg border border-red-200">
+                <div className="text-center">
+                    <Users className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                        {searchTerm ? 'No customers found' : 'No customers with orders'}
+                    </h3>
+                    <p className="text-gray-500">
+                        {searchTerm
+                            ? 'Try adjusting your search criteria'
+                            : 'Customers will appear here once they have orders'}
+                    </p>
+                </div>
+            </div>
+        ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {filteredCustomers.map((customer) => (
+                    <div
+                        key={customer._id}
+                        onClick={() => handleCustomerClick(customer._id)}
+                        className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 border-2 border-transparent hover:border-red-500 p-4"
+                    >
+                        {/* Customer Avatar */}
+                        <div className="flex items-center justify-center mb-3">
+                            <div className="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-full w-14 h-14 flex items-center justify-center text-lg font-bold shadow-lg">
+                                {(customer.firstName?.[0] || '?').toUpperCase()}
+                                {(customer.lastName?.[0] || '').toUpperCase()}
+                            </div>
+                        </div>
+
+                        {/* Customer Name */}
+                        <h3 className="text-base font-bold text-center text-gray-900 mb-3 line-clamp-2">
+                            {customer.firstName} {customer.lastName}
+                        </h3>
+
+                        {/* Customer Info */}
+                        <div className="space-y-1.5 pt-3 border-t border-gray-200">
+                            {customer.phone && (
+                                <div className="flex items-center gap-1.5 text-xs text-gray-600">
+                                    <span>📞</span>
+                                    <span className="truncate">{customer.phone}</span>
+                                </div>
+                            )}
+                            {customer.email && (
+                                <div className="flex items-center gap-1.5 text-xs text-gray-600 truncate">
+                                    <span>✉️</span>
+                                    <span className="truncate">{customer.email}</span>
+                                </div>
+                            )}
+
+                            {/* Assign Designer Dropdown (Only for Design Dept Head) */}
+                            {isDesignDeptHead && (
+                                <div className="mt-3 pt-2 border-t border-gray-100" onClick={(e) => e.stopPropagation()}>
+                                    <label className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1 block">
+                                        Assigned Designer
+                                    </label>
+                                    <select
+                                        className="w-full text-xs p-1.5 border border-gray-300 rounded focus:ring-1 focus:ring-violet-500 focus:border-violet-500 bg-gray-50"
+                                        value={customer.assignedDesigner?._id || ''}
+                                        onChange={async (e) => {
+                                            const designerId = e.target.value;
+                                            if (!designerId) return;
+
+                                            try {
+                                                await drawingAPI.assignDesigner({
+                                                    customerId: customer._id,
+                                                    designerId
+                                                });
+
+                                                // Refresh list to show update
+                                                fetchCustomers();
+                                                alert('Designer assigned successfully!');
+                                            } catch (err) {
+                                                console.error('Failed to assign designer:', err);
+                                                alert('Failed to assign designer');
+                                            }
+                                        }}
+                                    >
+                                        <option value="">Select Designer</option>
+                                        {designTeam.map(member => (
+                                            <option key={member._id} value={member._id}>
+                                                {member.firstName} {member.lastName}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        )}
+    </div>
+);
+};
+
+export default DrawingDashboard;

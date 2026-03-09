@@ -1,0 +1,347 @@
+[
+    {
+        "id": "nav_create_order",
+        "category": "Orders",
+        "question": "How to create a new order?",
+        "answer": "Navigate to **Orders** module from the sidebar. Click on the **+ New Order** button at the top right. Select a customer, add products, and click **Save**.",
+        "roles": [
+            "sales",
+            "admin",
+            "poc"
+        ],
+        "keywords": [
+            "create order",
+            "new order",
+            "add order",
+            "place order"
+        ]
+    },
+    {
+        "id": "nav_create_quote",
+        "category": "Quotations",
+        "question": "How to create a quotation?",
+        "answer": "Navigate to **Quotations** module. Click **+ New Quotation**. Enter details and click **Generate**. Once approved, you can convert it to an Order.",
+        "roles": [
+            "sales",
+            "admin",
+            "poc"
+        ],
+        "keywords": [
+            "create quote",
+            "new quotation",
+            "estimate",
+            "quotations menu"
+        ]
+    },
+    {
+        "id": "nav_create_inquiry",
+        "category": "Inquiries",
+        "question": "Where to create inquiries?",
+        "answer": "Navigate to the **Inquiries** module in the sidebar. Click the **+ Create Inquiry** button. Fill in the client details, product interest, and requirements, then save.",
+        "roles": [
+            "sales",
+            "admin",
+            "poc"
+        ],
+        "keywords": [
+            "create inquiry",
+            "new inquiry",
+            "add inquiry",
+            "inquiries",
+            "inquires",
+            "enquiry"
+        ]
+    },
+    {
+        "id": "nav_production_status",
+        "category": "Production",
+        "question": "How to check production status?",
+        "answer": "Navigate to **Production** > **Pre-Production** (for prep work) or **Post-Production** (for manufacturing updates). You can track real-time status and assign workers here.",
+        "roles": [
+            "production",
+            "pm",
+            "admin",
+            "management"
+        ],
+        "keywords": [
+            "production status",
+            "wip",
+            "work in progress",
+            "manufacturing",
+            "production menu"
+        ]
+    },
+    {
+        "id": "nav_add_customer",
+        "category": "Customers",
+        "question": "How to add a new customer?",
+        "answer": "Go to the **Customers** module. Click **Add Customer**. Fill in the name, contact info, and address details. Once saved, they will be available in Quotations and Orders.",
+        "roles": [
+            "sales",
+            "admin",
+            "poc"
+        ],
+        "keywords": [
+            "add customer",
+            "new client",
+            "create customer",
+            "customers list"
+        ]
+    },
+    {
+        "id": "nav_inventory_check",
+        "category": "Inventory",
+        "question": "How to check inventory stock?",
+        "answer": "Check stock levels in **Inventory Management** > **Dashboard** or individual categories. For raw materials like Plywood or Fabric, go to **Raw Material** in the sidebar.",
+        "roles": [
+            "inventory",
+            "production",
+            "admin"
+        ],
+        "keywords": [
+            "stock",
+            "inventory level",
+            "count",
+            "materials",
+            "check inventory"
+        ]
+    },
+    {
+        "id": "nav_crm_pipeline",
+        "category": "CRM",
+        "question": "Where is the CRM pipeline?",
+        "answer": "Navigate to **CRM** > **Pipeline**. Here you can see a drag-and-drop board of all active leads across stages like New, Contacted, Qualified, and Closed.",
+        "roles": [
+            "sales",
+            "admin"
+        ],
+        "keywords": [
+            "pipeline",
+            "deals",
+            "crm view",
+            "deal stages",
+            "lead pipeline"
+        ]
+    },
+    {
+        "id": "nav_poc_assignment",
+        "category": "POC Assignment",
+        "question": "How to assign a POC?",
+        "answer": "The **POC Assignment** module allows admins to link a Point of Contact to specific inquiries or customers for better tracking.",
+        "roles": [
+            "admin",
+            "management"
+        ],
+        "keywords": [
+            "assign poc",
+            "poc assignment",
+            "point of contact",
+            "assignment menu"
+        ]
+    },
+    {
+        "id": "nav_drawings",
+        "category": "Drawing",
+        "question": "Where to manage design drawings?",
+        "answer": "Go to the **Drawing** module. You can upload CAD files, view designer assignments, and mark drawings as approved for production.",
+        "roles": [
+            "design",
+            "admin",
+            "pm"
+        ],
+        "keywords": [
+            "drawings",
+            "design",
+            "cad",
+            "upload drawing",
+            "designer assignment"
+        ]
+    },
+    {
+        "id": "nav_machines",
+        "category": "Machines",
+        "question": "How to manage factory machines?",
+        "answer": "Navigate to the **Machines** module. Add new machinery, monitor maintenance status, and check which machines are currently active or under repair.",
+        "roles": [
+            "production",
+            "admin"
+        ],
+        "keywords": [
+            "machines",
+            "machinery",
+            "add machine",
+            "add machinery",
+            "maintenance",
+            "factory equipment",
+            "machine status"
+        ]
+    },
+    {
+        "id": "nav_ai_insights",
+        "category": "Customer Insights",
+        "question": "What is Customer Insights?",
+        "answer": "Go to the **Customer Insights** menu for AI-powered analytics on customer LTV, churn risk, and purchasing trends.",
+        "roles": [
+            "admin",
+            "management",
+            "sales"
+        ],
+        "keywords": [
+            "insights",
+            "analytics",
+            "trends",
+            "customer data",
+            "ltv"
+        ]
+    },
+    {
+        "id": "nav_raw_materials",
+        "category": "Raw Material",
+        "question": "How to manage raw materials?",
+        "answer": "The **Raw Material** module listed in the sidebar contains sub-categories like Plywood, Hardware, and Laminates. You can manage price books and stock for each category.",
+        "roles": [
+            "inventory",
+            "admin",
+            "production"
+        ],
+        "keywords": [
+            "raw materials",
+            "plywood",
+            "laminates",
+            "price book",
+            "material categories"
+        ]
+    },
+    {
+        "id": "nav_transport_dispatch",
+        "category": "Transport",
+        "question": "How to handle shipping and dispatch?",
+        "answer": "Go to the **Transport** module. Manage vehicle logs, driver assignments, and track the dispatch status of orders out for delivery.",
+        "roles": [
+            "transport",
+            "admin"
+        ],
+        "keywords": [
+            "dispatch",
+            "shipping",
+            "delivery",
+            "vehicle",
+            "driver",
+            "transportation"
+        ]
+    },
+    {
+        "id": "nav_stuck_login",
+        "category": "Troubleshooting",
+        "question": "I am stuck at login, what should I do?",
+        "answer": "Check your internet connection and verify credentials. If your account is locked, contact your **System Administrator** to reset your password or update your role.",
+        "roles": [
+            "all"
+        ],
+        "keywords": [
+            "login issue",
+            "cant login",
+            "forgot password",
+            "stuck",
+            "trouble",
+            "error",
+            "access"
+        ]
+    },
+    {
+        "id": "nav_ai_alerts",
+        "category": "AI Features",
+        "question": "Where are my AI alerts?",
+        "answer": "Click on **AI Alerts** in the sidebar. This central dashboard shows predictive warnings for low-stock items, production delays, and upcoming machine maintenance.",
+        "roles": [
+            "all"
+        ],
+        "keywords": [
+            "alerts",
+            "notifications",
+            "ai warnings",
+            "stock alerts",
+            "predictive"
+        ]
+    },
+    {
+        "id": "nav_staff_management",
+        "category": "Management",
+        "question": "How to manage employees?",
+        "answer": "Go to **Management** > **Employee** or **Staff**. Here you can add new team members, set their departments, and manage their basic profiles.",
+        "roles": [
+            "admin",
+            "management"
+        ],
+        "keywords": [
+            "employee",
+            "staff",
+            "hrm",
+            "add employee",
+            "management menu"
+        ]
+    },
+    {
+        "id": "nav_user_permissions",
+        "category": "Users",
+        "question": "How to change user permissions?",
+        "answer": "Only Admins can access the **Users / Permissions** module. You can edit user roles, grant access to specific dashboards, and manage organization-wide settings.",
+        "roles": [
+            "admin"
+        ],
+        "keywords": [
+            "permissions",
+            "roles",
+            "user access",
+            "edit user",
+            "grant access"
+        ]
+    },
+    {
+        "id": "nav_crm_dashboard",
+        "category": "CRM",
+        "question": "Where is the CRM Dashboard?",
+        "answer": "Go to **CRM** > **Dashboard** to see your lead conversion rates, revenue pipeline, and sales activity summaries.",
+        "roles": [
+            "sales",
+            "admin",
+            "management"
+        ],
+        "keywords": [
+            "crm dashboard",
+            "sales analytics",
+            "lead stats"
+        ]
+    },
+    {
+        "id": "nav_vendor_payments",
+        "category": "Vendors",
+        "question": "How to manage vendor payments?",
+        "answer": "Navigate to **Vendors** > **Vendor Payments**. Here you can track outstanding balances and record new payments to your suppliers.",
+        "roles": [
+            "accounts",
+            "admin"
+        ],
+        "keywords": [
+            "vendor payments",
+            "supplier payment",
+            "accounts payable"
+        ]
+    },
+    {
+        "id": "nav_price_book",
+        "category": "Raw Material",
+        "question": "Where is the Price Book?",
+        "answer": "Go to **Raw Material** > **Price Book**. This allows you to manage the unit prices for different materials like plywood, hardware, and fabrics.",
+        "roles": [
+            "inventory",
+            "admin",
+            "production"
+        ],
+        "keywords": [
+            "price book",
+            "material costs",
+            "update prices"
+        ]
+    }
+]

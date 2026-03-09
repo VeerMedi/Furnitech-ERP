@@ -1,0 +1,208 @@
+[
+    {
+        "id": "Q-101",
+        "quotation_number": "Q-101",
+        "customer_id": "CUST001",
+        "customer_name": "Rajesh Sharma",
+        "customer_email": "rajesh.sharma@email.com",
+        "customer_phone": "+91-9876543210",
+        "items": [
+            {
+                "id": "ITEM-001",
+                "product": "Modular Kitchen",
+                "category": "Kitchen",
+                "material": "Marine Plywood",
+                "quantity": 1,
+                "unit_price": 85000,
+                "total": 85000,
+                "specifications": {
+                    "length": "10 ft",
+                    "height": "8 ft",
+                    "custom_options": [
+                        "Soft Close",
+                        "LED Lighting",
+                        "Pull-out Drawers"
+                    ]
+                }
+            },
+            {
+                "id": "ITEM-002",
+                "product": "Dining Table",
+                "category": "Furniture",
+                "material": "Teak",
+                "quantity": 1,
+                "unit_price": 40000,
+                "total": 40000,
+                "specifications": {
+                    "dimensions": "6ft x 3ft",
+                    "custom_options": [
+                        "Glass Top",
+                        "Foldable"
+                    ]
+                }
+            }
+        ],
+        "total_value": 125000,
+        "status": "approved",
+        "created_date": "2024-12-05",
+        "approved_date": "2024-12-10",
+        "approved_by": "Sales Manager",
+        "valid_until": "2025-01-10",
+        "notes": "Customer prefers delivery by Jan 15, 2025"
+    },
+    {
+        "id": "Q-102",
+        "quotation_number": "Q-102",
+        "customer_id": "CUST002",
+        "customer_name": "Priya Patel",
+        "customer_email": "priya.patel@email.com",
+        "customer_phone": "+91-9876543211",
+        "items": [
+            {
+                "id": "ITEM-003",
+                "product": "Wardrobe",
+                "category": "Storage",
+                "material": "Laminate",
+                "quantity": 2,
+                "unit_price": 35000,
+                "total": 70000,
+                "specifications": {
+                    "height": "7 ft",
+                    "width": "6 ft",
+                    "custom_options": [
+                        "Mirror",
+                        "Sliding Doors",
+                        "Internal LED"
+                    ]
+                }
+            }
+        ],
+        "total_value": 70000,
+        "status": "pending",
+        "created_date": "2024-12-12",
+        "approved_date": null,
+        "approved_by": null,
+        "valid_until": "2025-01-12",
+        "notes": "Waiting for customer confirmation"
+    },
+    {
+        "id": "Q-103",
+        "quotation_number": "Q-103",
+        "customer_id": "CUST003",
+        "customer_name": "Amit Kumar",
+        "customer_email": "amit.kumar@email.com",
+        "customer_phone": "+91-9876543212",
+        "items": [
+            {
+                "id": "ITEM-004",
+                "product": "Office Desk",
+                "category": "Office Furniture",
+                "material": "Oak",
+                "quantity": 5,
+                "unit_price": 18000,
+                "total": 90000,
+                "specifications": {
+                    "dimensions": "5ft x 2.5ft",
+                    "custom_options": [
+                        "Cable Management",
+                        "Drawer Unit"
+                    ]
+                }
+            },
+            {
+                "id": "ITEM-005",
+                "product": "Office Chair",
+                "category": "Office Furniture",
+                "material": "Fabric/Metal",
+                "quantity": 5,
+                "unit_price": 8000,
+                "total": 40000,
+                "specifications": {
+                    "type": "Ergonomic",
+                    "custom_options": [
+                        "Lumbar Support",
+                        "Adjustable Height"
+                    ]
+                }
+            }
+        ],
+        "total_value": 130000,
+        "status": "approved",
+        "created_date": "2024-12-08",
+        "approved_date": "2024-12-14",
+        "approved_by": "Sales Manager",
+        "valid_until": "2025-01-14",
+        "notes": "Bulk order for new office setup"
+    },
+    {
+        "id": "Q-104",
+        "quotation_number": "Q-104",
+        "customer_id": "CUST004",
+        "customer_name": "Kavya Reddy",
+        "customer_email": "kavya.reddy@email.com",
+        "customer_phone": "+91-9876543213",
+        "items": [
+            {
+                "id": "ITEM-006",
+                "product": "TV Unit",
+                "category": "Living Room",
+                "material": "Walnut",
+                "quantity": 1,
+                "unit_price": 45000,
+                "total": 45000,
+                "specifications": {
+                    "dimensions": "6ft x 1.5ft",
+                    "custom_options": [
+                        "Glass Shelves",
+                        "Cable Management",
+                        "LED Backlighting"
+                    ]
+                }
+            }
+        ],
+        "total_value": 45000,
+        "status": "rejected",
+        "created_date": "2024-12-11",
+        "approved_date": null,
+        "approved_by": null,
+        "valid_until": "2025-01-11",
+        "notes": "Customer went with competitor"
+    },
+    {
+        "id": "Q-105",
+        "quotation_number": "Q-105",
+        "customer_id": "CUST005",
+        "customer_name": "Lakshmi Menon",
+        "customer_email": "lakshmi.menon@email.com",
+        "customer_phone": "+91-9876543214",
+        "items": [
+            {
+                "id": "ITEM-007",
+                "product": "Bedroom Set",
+                "category": "Bedroom",
+                "material": "Marine Plywood",
+                "quantity": 1,
+                "unit_price": 150000,
+                "total": 150000,
+                "specifications": {
+                    "includes": [
+                        "King Size Bed",
+                        "2x Nightstands",
+                        "Dresser"
+                    ],
+                    "custom_options": [
+                        "Upholstered Headboard",
+                        "Soft Close Drawers"
+                    ]
+                }
+            }
+        ],
+        "total_value": 150000,
+        "status": "approved",
+        "created_date": "2024-12-13",
+        "approved_date": "2024-12-15",
+        "approved_by": "Sales Manager",
+        "valid_until": "2025-02-15",
+        "notes": "Premium customer, priority delivery requested"
+    }
+]

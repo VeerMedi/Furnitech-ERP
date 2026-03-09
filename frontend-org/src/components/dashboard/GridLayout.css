@@ -1,0 +1,112 @@
+/* React Grid Layout Styles */
+@import 'react-grid-layout/css/styles.css';
+@import 'react-resizable/css/styles.css';
+
+/* Custom Grid Styles */
+.react-grid-layout {
+    position: relative;
+    transition: height 200ms ease;
+}
+
+.react-grid-item {
+    transition: all 200ms ease;
+    transition-property: left, top, width, height;
+}
+
+.react-grid-item img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.react-grid-item>.react-resizable-handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.react-grid-item>.react-resizable-handle::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.react-resizable-hide>.react-resizable-handle {
+    display: none;
+}
+
+.react-grid-item.react-grid-placeholder {
+    background: hsl(var(--primary) / 0.1);
+    opacity: 0.2;
+    transition-duration: 100ms;
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-radius: 0.75rem;
+    border: 2px dashed hsl(var(--primary));
+}
+
+.react-grid-item.react-draggable-dragging {
+    transition: none;
+    z-index: 3;
+    will-change: transform;
+    cursor: grabbing !important;
+}
+
+.react-grid-item.cssTransforms {
+    transition-property: transform, width, height;
+}
+
+.react-grid-item.resizing {
+    transition: none;
+    z-index: 1;
+    will-change: width, height;
+}
+
+/* Drag Handle */
+.drag-handle {
+    cursor: grab;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.drag-handle:hover {
+    background-color: hsl(var(--muted));
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+/* Card Animation on Add/Remove */
+.dashboard-card-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.dashboard-card-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.dashboard-card-exit {
+    opacity: 1;
+}
+
+.dashboard-card-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}

@@ -1,0 +1,360 @@
+[
+    {
+        "id": "tip-001",
+        "category": "Sales",
+        "title": "Improve Lead Conversion Rate",
+        "insight": "Your lead conversion rate has dropped by 15% in the last 2 weeks.",
+        "recommendation": "**Actions to take:**\n1. Follow up on pending inquiries within 24 hours\n2. Review quotation pricing - may be too high\n3. Assign top-performing salespeople to high-value leads\n4. Reduce quotation turnaround time",
+        "priority": "high",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-002",
+        "category": "Sales",
+        "title": "Quotation Approval Time Optimization",
+        "insight": "Average quotation approval time is 4.2 days vs industry standard of 2 days.",
+        "recommendation": "**Speed up approvals:**\n1. Implement automated preliminary approvals for < ₹50k quotes\n2. Add more sales managers with approval authority\n3. Set up mobile approval notifications\n4. Create approval deadline SLAs",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-003",
+        "category": "Production",
+        "title": "Reduce Production Delays",
+        "insight": "30% of production orders are delayed by 3+ days.",
+        "recommendation": "**Prevent delays:**\n1. Ensure materials are available before starting production\n2. Add buffer time for custom orders\n3. Schedule preventive machine maintenance\n4. Cross-train team members for flexibility",
+        "priority": "high",
+        "roles": [
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-004",
+        "category": "Production",
+        "title": "Optimize Machine Utilization",
+        "insight": "Machine M-04 is running at 90% capacity weekly.",
+        "recommendation": "**Consider:**\n1. **Plan for expansion** - Add second similar machine\n2. **Preventive maintenance** - Schedule before breakdown\n3. **Shift optimization** - Add second shift if needed\n4. **Cross-training** - Train operators on backup machines",
+        "priority": "medium",
+        "roles": [
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-005",
+        "category": "Inventory",
+        "title": "Chronic Low Stock Items",
+        "insight": "Plywood and Steel Legs are consistently below threshold.",
+        "recommendation": "**Inventory optimization:**\n1. **Increase reorder quantity** for high-usage items\n2. **Lower reorder threshold** to trigger earlier\n3. **Negotiate bulk discounts** with suppliers\n4. **Set up automatic reordering** for essentials",
+        "priority": "high",
+        "roles": [
+            "inventory",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-006",
+        "category": "Inventory",
+        "title": "Reduce Raw Material Wastage",
+        "insight": "Material wastage is at 12% vs industry standard of 8%.",
+        "recommendation": "**Reduce wastage:**\n1. Train cutting team on optimization techniques\n2. Use CAD software for cutting plans\n3. Repurpose offcuts for smaller components\n4. Track wastage per operator for accountability",
+        "priority": "medium",
+        "roles": [
+            "inventory",
+            "production"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-007",
+        "category": "Operations",
+        "title": "Preventive Maintenance Schedule",
+        "insight": "Machines running >200 hours without maintenance increase breakdown risk by 60%.",
+        "recommendation": "**Maintenance optimization:**\n1. Schedule maintenance every 180 hours (not 200+)\n2. Keep backup machines ready\n3. Stock critical spare parts\n4. Train team on basic troubleshooting",
+        "priority": "high",
+        "roles": [
+            "pm",
+            "production"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-008",
+        "category": "Operations",
+        "title": "Improve Dispatch Efficiency",
+        "recommendation": "**Streamline dispatch:**\n1. Create packing checklists for each product type\n2. Pre-label shipping boxes\n3. Schedule regular pickup times with couriers\n4. Implement barcode scanning for tracking",
+        "priority": "low",
+        "roles": [
+            "transport",
+            "pm"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-009",
+        "category": "Customer Experience",
+        "title": "Boost Repeat Orders",
+        "insight": "Only 35% of customers place repeat orders vs target of 50%.",
+        "recommendation": "**Increase repeat business:**\n1. Follow up 3 months after delivery\n2. Offer loyalty discounts for repeat customers\n3. Send product care tips and maintenance reminders\n4. Create referral incentive program",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-010",
+        "category": "Strategy",
+        "title": "Expand Custom Furniture Line",
+        "insight": "Custom orders have 40% higher margins than standard items.",
+        "recommendation": "**Scale custom offerings:**\n1. Hire specialized designers\n2. Build portfolio of custom work for marketing\n3. Create semi-custom templates to reduce lead time\n4. Invest in advanced machinery for customization",
+        "priority": "low",
+        "roles": [
+            "poc",
+            "design"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-011",
+        "category": "AI Adoption",
+        "title": "Leverage AI Employee Recommendations",
+        "insight": "Only 40% of assignments use AI recommendations, but AI-assigned tasks show 25% higher completion rates.",
+        "recommendation": "**Maximize AI benefits:**\n1. Trust AI recommendations - they analyze workload & expertise\n2. Review AI reasoning before overriding\n3. Track performance of AI vs manual assignments\n4. Provide feedback to improve AI accuracy over time",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-012",
+        "category": "AI Adoption",
+        "title": "Utilize RAG AI Chat for Quick Insights",
+        "recommendation": "**Get instant answers:**\n1. Use dashboard AI chat for data queries instead of manually searching\n2. Ask: \"Show pending inquiries\", \"Which machines need maintenance?\"\n3. Get real-time KPIs without running reports\n4. Save time on routine status checks",
+        "priority": "medium",
+        "roles": [
+            "all"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-013",
+        "category": "AI Adoption",
+        "title": "Confirm Automation Suggestions Promptly",
+        "insight": "Automation suggestions left unconfirmed for >2 days lose 60% of their value.",
+        "recommendation": "**Act on AI suggestions:**\n1. Review automation dashboard daily\n2. Confirm or dismiss suggestions within 24 hours\n3. Low-stock PO suggestions are time-sensitive\n4. Machine maintenance suggestions prevent costly breakdowns",
+        "priority": "high",
+        "roles": [
+            "inventory",
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-014",
+        "category": "Data Quality",
+        "title": "Improve Order Status Updates",
+        "insight": "25% of orders lack real-time status updates, causing customer inquiries.",
+        "recommendation": "**Maintain data accuracy:**\n1. Update order status immediately upon milestone completion\n2. Add photos/notes to status updates for transparency\n3. Enable auto-notifications to customers on status changes\n4. Review and update stale orders weekly",
+        "priority": "high",
+        "roles": [
+            "production",
+            "sales"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-015",
+        "category": "Data Quality",
+        "title": "Complete Vendor Information",
+        "insight": "30% of vendors missing critical contact or payment information.",
+        "recommendation": "**Clean vendor data:**\n1. Audit vendor records monthly\n2. Ensure all vendors have: contact person, phone, email, payment terms\n3. Add vendor performance ratings\n4. Remove duplicate vendor entries",
+        "priority": "medium",
+        "roles": [
+            "inventory",
+            "accounts"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-016",
+        "category": "Data Quality",
+        "title": "Track Inquiry Sources Accurately",
+        "insight": "60% of inquiries have \"Unknown\" source, limiting marketing ROI analysis.",
+        "recommendation": "**Better source tracking:**\n1. Always record inquiry source (Website, Referral, Walk-in, etc.)\n2. Track which marketing campaigns generate leads\n3. Analyze conversion rate by source\n4. Allocate marketing budget to high-performing channels",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-017",
+        "category": "Team Collaboration",
+        "title": "Sales-Production Handoff Optimization",
+        "insight": "Delays occur at sales → production handoff due to incomplete information.",
+        "recommendation": "**Smooth handoffs:**\n1. Sales: Ensure all custom specs documented before approval\n2. Production: Review specs within 24 hours, raise clarifications early\n3. Use shared checklist for handoff completion\n4. Schedule weekly sync meeting between teams",
+        "priority": "high",
+        "roles": [
+            "sales",
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-018",
+        "category": "Team Collaboration",
+        "title": "Inventory-Production Coordination",
+        "recommendation": "**Prevent material shortages:**\n1. Production: Share upcoming week's material needs every Monday\n2. Inventory: Flag potential shortages immediately\n3. Use shared material forecast dashboard\n4. Prioritize POs for confirmed production orders",
+        "priority": "high",
+        "roles": [
+            "inventory",
+            "production",
+            "pm"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-019",
+        "category": "Team Collaboration",
+        "title": "Enable Cross-Functional Visibility",
+        "recommendation": "**Break information silos:**\n1. Use shared dashboards for key metrics\n2. Tag relevant roles in task comments\n3. Hold weekly all-hands standup (15 min max)\n4. Share wins and blockers across teams",
+        "priority": "medium",
+        "roles": [
+            "all"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-020",
+        "category": "Customer Retention",
+        "title": "Post-Delivery Follow-Up Strategy",
+        "insight": "Customers contacted within 1 month of delivery are 3x more likely to reorder.",
+        "recommendation": "**Structured follow-up:**\n1. Week 1: Delivery satisfaction check\n2. Month 1: Product quality and experience survey\n3. Month 3: Maintenance tips and new offerings\n4. Month 6: Personalized upsell based on past orders",
+        "priority": "high",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-021",
+        "category": "Customer Retention",
+        "title": "Create Customer Loyalty Program",
+        "recommendation": "**Reward repeat customers:**\n1. 5% discount on 2nd order, 10% on 3rd+\n2. Priority production scheduling for loyal customers\n3. Free delivery for orders >₹1L from repeat customers\n4. Birthday/anniversary special offers",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-022",
+        "category": "Customer Retention",
+        "title": "Implement Customer Health Scoring",
+        "insight": "Proactive outreach to at-risk customers can prevent 70% of churn.",
+        "recommendation": "**Monitor customer health:**\n1. Track: order frequency, feedback scores, payment timeliness\n2. Flag customers with declining engagement\n3. Assign account manager for high-value customers\n4. Run win-back campaigns for dormant customers",
+        "priority": "medium",
+        "roles": [
+            "sales",
+            "poc"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-023",
+        "category": "Cost Optimization",
+        "title": "Negotiate Volume Discounts with Suppliers",
+        "insight": "Bulk purchasing can reduce material costs by 10-15%.",
+        "recommendation": "**Strategic procurement:**\n1. Analyze 6-month material consumption patterns\n2. Negotiate quarterly bulk contracts for top 5 materials\n3. Share forecast with vendors for better pricing\n4. Consider just-in-time delivery to reduce storage costs",
+        "priority": "high",
+        "roles": [
+            "inventory",
+            "accounts",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-024",
+        "category": "Cost Optimization",
+        "title": "Reduce Energy Consumption",
+        "recommendation": "**Lower utility costs:**\n1. Schedule high-energy machines during off-peak hours\n2. Implement machine auto-shutdown when idle >30 min\n3. Upgrade to energy-efficient lighting\n4. Monitor energy usage per machine to identify inefficiencies",
+        "priority": "medium",
+        "roles": [
+            "production",
+            "pm"
+        ],
+        "data_driven": false
+    },
+    {
+        "id": "tip-025",
+        "category": "Cost Optimization",
+        "title": "Optimize Labor Utilization",
+        "insight": "20% of labor hours are idle time during slow periods.",
+        "recommendation": "**Better workforce planning:**\n1. Use AI workload forecasting for staffing\n2. Cross-train workers for multiple roles\n3. Implement flexible shifts during high-demand periods\n4. Track labor efficiency metrics per team member",
+        "priority": "medium",
+        "roles": [
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-026",
+        "category": "Sales",
+        "title": "Reduce Quote-to-Order Time",
+        "insight": "Customers who receive quotes within 4 hours convert 50% better.",
+        "recommendation": "**Speed wins deals:**\n1. Use quotation templates for standard items\n2. Pre-calculate pricing for common configurations\n3. Enable mobile quote generation for field sales\n4. Set 4-hour response time SLA for all inquiries",
+        "priority": "high",
+        "roles": [
+            "sales"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-027",
+        "category": "Production",
+        "title": "Implement Quality Checkpoints",
+        "insight": "Early-stage quality checks reduce rework by 80%.",
+        "recommendation": "**Quality gates:**\n1. Pre-production design review\n2. Mid-production quality inspection\n3. Pre-packing final quality check\n4. Document quality issues for process improvement",
+        "priority": "high",
+        "roles": [
+            "production",
+            "pm"
+        ],
+        "data_driven": true
+    },
+    {
+        "id": "tip-028",
+        "category": "Inventory",
+        "title": "ABC Analysis for Inventory Management",
+        "recommendation": "**Prioritize inventory control:**\n1. **A-items** (20% of items, 80% of value): Daily monitoring, low buffer\n2. **B-items** (30% of items, 15% of value): Weekly review, moderate buffer\n3. **C-items** (50% of items, 5% of value): Monthly review, high buffer\n4. Focus purchasing efforts on A-items",
+        "priority": "medium",
+        "roles": [
+            "inventory"
+        ],
+        "data_driven": false
+    }
+]

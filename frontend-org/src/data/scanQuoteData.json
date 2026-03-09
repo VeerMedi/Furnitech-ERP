@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Straight workstation",
+        "category": "Workstations",
+        "area": "Workstation Area 1 (12 PAX)",
+        "dimensions": "1050x600mm",
+        "count": 12
+    },
+    {
+        "name": "Straight workstation",
+        "category": "Workstations",
+        "area": "Workstation Area 2 (12 PAX)",
+        "dimensions": "1050x600mm",
+        "count": 12
+    },
+    {
+        "name": "Executive workstation",
+        "category": "Workstations",
+        "area": "Executive Cabin",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "Side runner or low-height storage",
+        "category": "Storage",
+        "area": "Executive Cabin",
+        "dimensions": "1200mm",
+        "count": 1
+    },
+    {
+        "name": "Printer storage unit",
+        "category": "Storage",
+        "area": "Workstation Area 1",
+        "dimensions": "2130x600mm",
+        "count": 1
+    },
+    {
+        "name": "Full-height storage cabinet",
+        "category": "Storage",
+        "area": "Breakout Area",
+        "dimensions": "583mm",
+        "count": 1
+    },
+    {
+        "name": "Conference table",
+        "category": "Tables",
+        "area": "Conference Room (8 PAX)",
+        "dimensions": "2448mm",
+        "count": 1
+    },
+    {
+        "name": "Conference chairs",
+        "category": "Seating",
+        "area": "Conference Room (8 PAX)",
+        "dimensions": "unknown",
+        "count": 8
+    },
+    {
+        "name": "Meeting table",
+        "category": "Tables",
+        "area": "Meeting Room (4 PAX)",
+        "dimensions": "1320mm",
+        "count": 1
+    },
+    {
+        "name": "Meeting chairs",
+        "category": "Seating",
+        "area": "Meeting Room (4 PAX)",
+        "dimensions": "unknown",
+        "count": 4
+    },
+    {
+        "name": "Reception desk",
+        "category": "Workstations",
+        "area": "Reception & Waiting Room",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "Waiting seating",
+        "category": "Seating",
+        "area": "Reception & Waiting Room",
+        "dimensions": "unknown",
+        "count": 4
+    },
+    {
+        "name": "Pantry base units",
+        "category": "Storage",
+        "area": "Pantry + Cafeteria (3 PAX)",
+        "dimensions": "2229x400mm",
+        "count": 1
+    },
+    {
+        "name": "L-shaped workstation",
+        "category": "Workstations",
+        "area": "Open Cubical - 01",
+        "dimensions": "1200x600mm",
+        "count": 1
+    },
+    {
+        "name": "L-shaped workstation",
+        "category": "Workstations",
+        "area": "Open Cubical - 02",
+        "dimensions": "1200x600mm",
+        "count": 1
+    },
+    {
+        "name": "L-shaped workstation",
+        "category": "Workstations",
+        "area": "Open Cubical - 03",
+        "dimensions": "1200x600mm",
+        "count": 1
+    },
+    {
+        "name": "Task chairs for workstations Area 1",
+        "category": "Seating",
+        "area": "Workstation Area 1 (12 PAX)",
+        "dimensions": "unknown",
+        "count": 12
+    },
+    {
+        "name": "Task chairs for workstations Area 2",
+        "category": "Seating",
+        "area": "Workstation Area 2 (12 PAX)",
+        "dimensions": "unknown",
+        "count": 12
+    },
+    {
+        "name": "Task chairs for cubicals",
+        "category": "Seating",
+        "area": "Open Cubicals",
+        "dimensions": "unknown",
+        "count": 3
+    },
+    {
+        "name": "Executive chair",
+        "category": "Seating",
+        "area": "Executive Cabin",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "Reception chair",
+        "category": "Seating",
+        "area": "Reception & Waiting Room",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "White board",
+        "category": "Accessories",
+        "area": "Meeting Room (4 PAX)",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "TV unit",
+        "category": "Accessories",
+        "area": "Reception & Waiting Room",
+        "dimensions": "unknown",
+        "count": 1
+    },
+    {
+        "name": "Collapsible partition",
+        "category": "Accessories",
+        "area": "Conference Room (8 PAX)",
+        "dimensions": "unknown",
+        "count": 1
+    }
+]

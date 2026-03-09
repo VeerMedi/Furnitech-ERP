@@ -1,0 +1,392 @@
+[
+    {
+        "customer_id": "CUST001",
+        "name": "Rajesh Sharma",
+        "email": "rajesh.sharma@example.com",
+        "region": "Mumbai",
+        "age": 35,
+        "total_spent": 325000,
+        "past_orders": [
+            "ORD001",
+            "ORD015",
+            "ORD028"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "Matte Laminate",
+            "Soft Close Hinges"
+        ],
+        "first_purchase_date": "2023-06-15",
+        "last_purchase_date": "2024-10-20"
+    },
+    {
+        "customer_id": "CUST002",
+        "name": "Priya Patel",
+        "email": "priya.patel@example.com",
+        "region": "Ahmedabad",
+        "age": 29,
+        "total_spent": 185000,
+        "past_orders": [
+            "ORD002",
+            "ORD019"
+        ],
+        "preferences": [
+            "Wardrobe",
+            "Walnut Finish",
+            "Full Mirror"
+        ],
+        "first_purchase_date": "2023-08-22",
+        "last_purchase_date": "2024-09-10"
+    },
+    {
+        "customer_id": "CUST003",
+        "name": "Amit Kumar",
+        "email": "amit.kumar@example.com",
+        "region": "Delhi",
+        "age": 42,
+        "total_spent": 520000,
+        "past_orders": [
+            "ORD003",
+            "ORD012",
+            "ORD024",
+            "ORD035"
+        ],
+        "preferences": [
+            "Office Furniture",
+            "Leather Upholstery",
+            "Executive Desk"
+        ],
+        "first_purchase_date": "2023-03-10",
+        "last_purchase_date": "2024-11-05"
+    },
+    {
+        "customer_id": "CUST004",
+        "name": "Sneha Reddy",
+        "email": "sneha.reddy@example.com",
+        "region": "Hyderabad",
+        "age": 31,
+        "total_spent": 295000,
+        "past_orders": [
+            "ORD004",
+            "ORD017",
+            "ORD030"
+        ],
+        "preferences": [
+            "TV Unit",
+            "Glossy White",
+            "Cable Management"
+        ],
+        "first_purchase_date": "2023-07-18",
+        "last_purchase_date": "2024-08-25"
+    },
+    {
+        "customer_id": "CUST005",
+        "name": "Vikram Singh",
+        "email": "vikram.singh@example.com",
+        "region": "Pune",
+        "age": 38,
+        "total_spent": 410000,
+        "past_orders": [
+            "ORD005",
+            "ORD013",
+            "ORD026",
+            "ORD037"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "Marine Plywood",
+            "LED Lighting"
+        ],
+        "first_purchase_date": "2023-04-05",
+        "last_purchase_date": "2024-10-12"
+    },
+    {
+        "customer_id": "CUST006",
+        "name": "Anjali Gupta",
+        "email": "anjali.gupta@example.com",
+        "region": "Bangalore",
+        "age": 27,
+        "total_spent": 145000,
+        "past_orders": [
+            "ORD006",
+            "ORD021"
+        ],
+        "preferences": [
+            "Storage Units",
+            "Oak Finish",
+            "Sliding Doors"
+        ],
+        "first_purchase_date": "2023-09-12",
+        "last_purchase_date": "2024-07-08"
+    },
+    {
+        "customer_id": "CUST007",
+        "name": "Karan Mehta",
+        "email": "karan.mehta@example.com",
+        "region": "Chennai",
+        "age": 44,
+        "total_spent": 675000,
+        "past_orders": [
+            "ORD007",
+            "ORD014",
+            "ORD023",
+            "ORD031",
+            "ORD039"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "Wardrobe",
+            "Teak Wood"
+        ],
+        "first_purchase_date": "2023-02-20",
+        "last_purchase_date": "2024-11-18"
+    },
+    {
+        "customer_id": "CUST008",
+        "name": "Neha Kapoor",
+        "email": "neha.kapoor@example.com",
+        "region": "Jaipur",
+        "age": 33,
+        "total_spent": 225000,
+        "past_orders": [
+            "ORD008",
+            "ORD020",
+            "ORD033"
+        ],
+        "preferences": [
+            "Wardrobe",
+            "Sliding Wardrobe",
+            "Acrylic Finish"
+        ],
+        "first_purchase_date": "2023-05-30",
+        "last_purchase_date": "2024-09-22"
+    },
+    {
+        "customer_id": "CUST009",
+        "name": "Sanjay Desai",
+        "email": "sanjay.desai@example.com",
+        "region": "Surat",
+        "age": 36,
+        "total_spent": 315000,
+        "past_orders": [
+            "ORD009",
+            "ORD018",
+            "ORD029"
+        ],
+        "preferences": [
+            "Office Furniture",
+            "Modular Desk",
+            "Ergonomic Chair"
+        ],
+        "first_purchase_date": "2023-06-25",
+        "last_purchase_date": "2024-10-30"
+    },
+    {
+        "customer_id": "CUST010",
+        "name": "Divya Nair",
+        "email": "divya.nair@example.com",
+        "region": "Kochi",
+        "age": 30,
+        "total_spent": 195000,
+        "past_orders": [
+            "ORD010",
+            "ORD025"
+        ],
+        "preferences": [
+            "TV Unit",
+            "Walnut Veneer",
+            "Floating Design"
+        ],
+        "first_purchase_date": "2023-08-08",
+        "last_purchase_date": "2024-08-15"
+    },
+    {
+        "customer_id": "CUST011",
+        "name": "Rahul Verma",
+        "email": "rahul.verma@example.com",
+        "region": "Lucknow",
+        "age": 40,
+        "total_spent": 385000,
+        "past_orders": [
+            "ORD011",
+            "ORD022",
+            "ORD034"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "Chimney Hood",
+            "Quartz Countertop"
+        ],
+        "first_purchase_date": "2023-04-18",
+        "last_purchase_date": "2024-11-02"
+    },
+    {
+        "customer_id": "CUST012",
+        "name": "Pooja Shah",
+        "email": "pooja.shah@example.com",
+        "region": "Vadodara",
+        "age": 28,
+        "total_spent": 165000,
+        "past_orders": [
+            "ORD016",
+            "ORD032"
+        ],
+        "preferences": [
+            "Wardrobe",
+            "White Laminate",
+            "Drawer Units"
+        ],
+        "first_purchase_date": "2023-07-05",
+        "last_purchase_date": "2024-09-18"
+    },
+    {
+        "customer_id": "CUST013",
+        "name": "Arjun Pillai",
+        "email": "arjun.pillai@example.com",
+        "region": "Trivandrum",
+        "age": 45,
+        "total_spent": 540000,
+        "past_orders": [
+            "ORD027",
+            "ORD036",
+            "ORD040"
+        ],
+        "preferences": [
+            "Office Furniture",
+            "Conference Table",
+            "Premium Leather"
+        ],
+        "first_purchase_date": "2023-03-28",
+        "last_purchase_date": "2024-11-10"
+    },
+    {
+        "customer_id": "CUST014",
+        "name": "Meera Iyer",
+        "email": "meera.iyer@example.com",
+        "region": "Coimbatore",
+        "age": 32,
+        "total_spent": 275000,
+        "past_orders": [
+            "ORD038"
+        ],
+        "preferences": [
+            "Storage Units",
+            "Modular Cabinets",
+            "Handleless Design"
+        ],
+        "first_purchase_date": "2024-10-05",
+        "last_purchase_date": "2024-10-05"
+    },
+    {
+        "customer_id": "CUST015",
+        "name": "Rohit Bose",
+        "email": "rohit.bose@example.com",
+        "region": "Kolkata",
+        "age": 37,
+        "total_spent": 445000,
+        "past_orders": [
+            "ORD041",
+            "ORD042"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "Island Counter",
+            "Granite Top"
+        ],
+        "first_purchase_date": "2024-09-12",
+        "last_purchase_date": "2024-11-20"
+    },
+    {
+        "customer_id": "CUST016",
+        "name": "Shruti Malhotra",
+        "email": "shruti.malhotra@example.com",
+        "region": "Chandigarh",
+        "age": 26,
+        "total_spent": 125000,
+        "past_orders": [
+            "ORD043"
+        ],
+        "preferences": [
+            "TV Unit",
+            "Matte Black",
+            "Open Shelving"
+        ],
+        "first_purchase_date": "2024-08-20",
+        "last_purchase_date": "2024-08-20"
+    },
+    {
+        "customer_id": "CUST017",
+        "name": "Aditya Rao",
+        "email": "aditya.rao@example.com",
+        "region": "Mysore",
+        "age": 41,
+        "total_spent": 355000,
+        "past_orders": [
+            "ORD044",
+            "ORD045"
+        ],
+        "preferences": [
+            "Wardrobe",
+            "Sliding Wardrobe",
+            "Mirror Panels"
+        ],
+        "first_purchase_date": "2024-07-15",
+        "last_purchase_date": "2024-10-28"
+    },
+    {
+        "customer_id": "CUST018",
+        "name": "Kavya Reddy",
+        "email": "kavya.reddy@example.com",
+        "region": "Vijayawada",
+        "age": 34,
+        "total_spent": 265000,
+        "past_orders": [
+            "ORD046"
+        ],
+        "preferences": [
+            "Office Furniture",
+            "Standing Desk",
+            "Cable Tray"
+        ],
+        "first_purchase_date": "2024-09-05",
+        "last_purchase_date": "2024-09-05"
+    },
+    {
+        "customer_id": "CUST019",
+        "name": "Manish Joshi",
+        "email": "manish.joshi@example.com",
+        "region": "Nagpur",
+        "age": 39,
+        "total_spent": 485000,
+        "past_orders": [
+            "ORD047",
+            "ORD048"
+        ],
+        "preferences": [
+            "Modular Kitchen",
+            "U-Shaped Layout",
+            "Built-in Appliances"
+        ],
+        "first_purchase_date": "2024-06-10",
+        "last_purchase_date": "2024-11-15"
+    },
+    {
+        "customer_id": "CUST020",
+        "name": "Lakshmi Menon",
+        "email": "lakshmi.menon@example.com",
+        "region": "Kannur",
+        "age": 43,
+        "total_spent": 395000,
+        "past_orders": [
+            "ORD049",
+            "ORD050"
+        ],
+        "preferences": [
+            "Storage Units",
+            "Wardrobe",
+            "Customized Shelving"
+        ],
+        "first_purchase_date": "2024-08-01",
+        "last_purchase_date": "2024-11-08"
+    }
+]

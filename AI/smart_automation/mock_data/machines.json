@@ -1,0 +1,64 @@
+{
+    "machines": [
+        {
+            "machine_id": "MCH-001",
+            "name": "CNC Router M2",
+            "type": "CNC Machine",
+            "department": "Production",
+            "run_hours": 245,
+            "maintenance_threshold": 200,
+            "last_maintenance": "2024-11-01",
+            "next_maintenance_due": "2025-01-01",
+            "status": "overused",
+            "location": "Factory Floor - Section A"
+        },
+        {
+            "machine_id": "MCH-002",
+            "name": "Panel Saw PS-450",
+            "type": "Cutting Machine",
+            "department": "Production",
+            "run_hours": 120,
+            "maintenance_threshold": 150,
+            "last_maintenance": "2024-12-01",
+            "next_maintenance_due": "2025-02-01",
+            "status": "operational",
+            "location": "Factory Floor - Section B"
+        },
+        {
+            "machine_id": "MCH-003",
+            "name": "Edge Banding Machine",
+            "type": "Finishing Machine",
+            "department": "Production",
+            "run_hours": 180,
+            "maintenance_threshold": 200,
+            "last_maintenance": "2024-11-15",
+            "next_maintenance_due": "2025-01-15",
+            "status": "operational",
+            "location": "Factory Floor - Section C"
+        },
+        {
+            "machine_id": "MCH-004",
+            "name": "Spray Booth SB-300",
+            "type": "Finishing Equipment",
+            "department": "Finishing",
+            "run_hours": 210,
+            "maintenance_threshold": 180,
+            "last_maintenance": "2024-10-20",
+            "next_maintenance_due": "2024-12-20",
+            "status": "overused",
+            "location": "Finishing Area"
+        },
+        {
+            "machine_id": "MCH-005",
+            "name": "Drilling Machine DM-100",
+            "type": "Drilling Equipment",
+            "department": "Production",
+            "run_hours": 95,
+            "maintenance_threshold": 150,
+            "last_maintenance": "2024-12-05",
+            "next_maintenance_due": "2025-02-05",
+            "status": "operational",
+            "location": "Factory Floor - Section A"
+        }
+    ]
+}

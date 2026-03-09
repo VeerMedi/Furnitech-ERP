@@ -1,0 +1,1162 @@
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { dashboardAPI, inquiryAPI } from '../services/api';
+import { useAuthStore } from '../stores/authStore';
+import { toast } from '../hooks/useToast';
+import '../dashboard-compact.css';
+import { Line } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+} from 'chart.js';
+import { Users, Armchair, FileText, Package, TrendingUp, TrendingDown, Minus, X, Calendar, User, Phone, Mail, Settings, GripVertical } from 'lucide-react';
+import AIAssistant from '../components/AIAssistant';
+// import GridLayout from 'react-grid-layout'; // TODO: Fix later for drag functionality
+import DashboardCustomizer from '../components/dashboard/DashboardCustomizer';
+import DetailedGraphModal from '../components/dashboard/DetailedGraphModal';
+import GraphDropZone from '../components/dashboard/GraphDropZone';
+import DraggableCardWrapper from '../components/dashboard/DraggableCardWrapper';
+import { renderCard } from '../components/dashboard/DashboardCards';
+import { AVAILABLE_CARDS, getDefaultLayout, saveLayout, loadLayout, loadEnabledCards } from '../components/dashboard/CardLibrary';
+// import '../components/dashboard/GridLayout.css'; // Temporarily disabled
+
+// const ResponsiveGridLayout = GridLayout.WidthProvider(GridLayout.Responsive); // TODO: Fix later
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
+
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const location = useLocation(); // Track navigation
+  const { user } = useAuthStore();
+  const [stats, setStats] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
+  const [formData, setFormData] = useState({
+    customerName: '',
+    contact: '',
+    email: '',
+    address: '',
+    enquiryDate: new Date().toISOString().split('T')[0],
+    enquiryTime: new Date().toTimeString().split(' ')[0].slice(0, 5),
+    productName: '',
+    status: 'new',
+    priority: 'medium',
+    leadPlatform: 'Website',
+    message: '',
+    productDetails: '',
+  });
+
+  //Dashboard Customization State
+  const [layout, setLayout] = useState(loadLayout());
+  const [enabledCards, setEnabledCards] = useState(loadEnabledCards());
+  const [showCustomizer, setShowCustomizer] = useState(false);
+
+  // Drag & Drop State
+  const [isDragging, setIsDragging] = useState(false);
+  const [showGraphModal, setShowGraphModal] = useState(false);
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  // Drag Handlers
+  const handleDragStart = (cardId, cardTitle) => {
+    setIsDragging(true);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (cardId, cardTitle) => {
+    setSelectedCard({ id: cardId, title: cardTitle });
+    setShowGraphModal(true);
+    setIsDragging(false);
+  };
+
+  // Role-based access control - redirect to appropriate dashboard
+  useEffect(() => {
+    const userEmail = user?.email;
+    const dashboardPermissions = user?.dashboardPermissions || [];
+
+    // Bypass redirect for jasleen@vlite.com - full admin access
+    if (userEmail === 'jasleen@vlite.com') {
+      return; // Stay on dashboard, no redirect
+    }
+
+    // Bypass redirect for Admin role only - POC should go to inquiries
+    const userRole = user?.userRole;
+    if (userRole === 'Admin') {
+      return; // No redirect for Admin role
+    }
+
+    // POC role should redirect to inquiries
+    if (userRole === 'POC') {
+      navigate('/inquiries', { replace: true });
+      return;
+    }
+
+    // If user has assigned dashboards, redirect to first one
+    if (dashboardPermissions && dashboardPermissions.length > 0) {
+      // Check if user is Salesman - prioritize salesman-dashboard
+      const userRole = user?.userRole?.toLowerCase();
+      let firstDashboard = dashboardPermissions[0].dashboard;
+
+      if (userRole === 'salesman') {
+        const salesmanDash = dashboardPermissions.find(d => d.dashboard === 'salesman-dashboard');
+        if (salesmanDash) {
+          firstDashboard = 'salesman-dashboard';
+        }
+      }
+
+      // Map dashboard IDs to routes
+      const dashboardRoutes = {
+        'salesman-dashboard': '/salesman-dashboard',
+        'poc-assignment': '/poc-assignment',
+        'drawings': '/drawings',
+        'design-assignment': '/design-assignment',
+        'products': '/products',
+        'customers': '/customers',
+        'inquiries': '/inquiries',
+        'quotations': '/quotations',
+        'orders': '/orders',
+        'crm': '/crm',
+        'crm-stage': '/crm/pipeline',
+        'crm-payments': '/crm/payments',
+        'production': '/production',
+        'production-pre-production': '/production/pre-production',
+        'production-post-production': '/production/post-production',
+        'machines': '/machines',
+        'transport': '/transport',
+        'vendors': '/vendors',
+        'vendors-details': '/vendors/details',
+        'vendors-payments': '/vendors/payments',
+        'management': '/management',
+        'inventory': '/inventory',
+        'raw-material': '/raw-material',
+      };
+
+      const targetRoute = dashboardRoutes[firstDashboard];
+
+      if (targetRoute) {
+        navigate(targetRoute, { replace: true });
+      }
+    }
+  }, [user, navigate]);
+
+  useEffect(() => {
+    fetchStats();
+
+    // Show welcome toast only once per session (not on every navigation)
+    const hasShownWelcomeThisSession = sessionStorage.getItem('welcomeToastShown');
+
+    if (!hasShownWelcomeThisSession) {
+      toast.success(`Welcome back, ${user?.firstName || 'User'}! 👋`);
+      sessionStorage.setItem('welcomeToastShown', 'true');
+    }
+
+    // Real-time auto-refresh for dashboard stats (every 30 seconds)
+    const refreshInterval = setInterval(() => {
+      fetchStats();
+    }, 30000); // 30 seconds
+
+    // Cleanup on unmount
+    return () => clearInterval(refreshInterval);
+  }, []);
+
+  // Initial scroll - minimal to reduce flicker
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      const main = document.querySelector('main');
+      if (main) main.scrollTop = 0;
+    };
+
+    scrollToTop();
+    // Stats will handle final scroll, so minimal retries here
+  }, [location.key, location.pathname]);
+
+  const fetchStats = async () => {
+    try {
+      const response = await dashboardAPI.getStats();
+      console.log('📊 Dashboard Stats Response:', response.data);
+      console.log('📊 Stats Data:', response.data.data);
+      setStats(response.data.data || {});
+
+      // Scroll to top after data loads (prevents content push-down)
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        const main = document.querySelector('main');
+        if (main) main.scrollTop = 0;
+        console.log('🔝 Post-stats scroll executed');
+      }, 50);
+    } catch (error) {
+      console.error('❌ Failed to fetch stats:', error);
+      setStats({});
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleInquirySubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Save to database only
+      const response = await inquiryAPI.create(formData);
+      console.log('Inquiry created:', response.data);
+
+      toast.success('Inquiry created successfully! ✅');
+      handleCloseModal();
+      // Refresh stats
+      fetchStats();
+    } catch (error) {
+      console.error('Error creating inquiry:', error);
+      toast.error('Failed to create inquiry. Please try again.');
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowInquiryModal(false);
+    setFormData({
+      customerName: '',
+      contact: '',
+      email: '',
+      address: '',
+      enquiryDate: new Date().toISOString().split('T')[0],
+      enquiryTime: new Date().toTimeString().split(' ')[0].slice(0, 5),
+      productName: '',
+      status: 'new',
+      priority: 'medium',
+      leadPlatform: 'Website',
+      message: '',
+      productDetails: '',
+    });
+  };
+
+  // Dashboard Customization Handlers
+  const handleLayoutChange = (newLayout) => {
+    setLayout(newLayout);
+    saveLayout(newLayout, enabledCards);
+  };
+
+  const handleToggleCard = (cardId) => {
+    const newEnabledCards = enabledCards.includes(cardId)
+      ? enabledCards.filter(id => id !== cardId)
+      : [...enabledCards, cardId];
+
+    setEnabledCards(newEnabledCards);
+
+    // Update layout
+    if (newEnabledCards.includes(cardId)) {
+      // Add new card to layout
+      const card = AVAILABLE_CARDS.find(c => c.id === cardId);
+      const newLayoutItem = {
+        i: cardId,
+        x: 0,
+        y: Infinity, // Put at bottom
+        w: card.defaultSize.w,
+        h: card.defaultSize.h,
+      };
+      setLayout([...layout, newLayoutItem]);
+    } else {
+      // Remove card from layout
+      setLayout(layout.filter(item => item.i !== cardId));
+    }
+
+    saveLayout(layout, newEnabledCards);
+    toast.success(enabledCards.includes(cardId) ? 'Card removed' : 'Card added');
+  };
+
+  const handleResetLayout = () => {
+    const defaultLayout = getDefaultLayout();
+    const defaultCards = AVAILABLE_CARDS.filter(c => c.enabled).map(c => c.id);
+    setLayout(defaultLayout);
+    setEnabledCards(defaultCards);
+    saveLayout(defaultLayout, defaultCards);
+    toast.success('Dashboard reset to default layout');
+  };
+
+  // Generate smooth line chart data
+  const generateTrendData = (baseValue, variance = 20) => {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return months.map(() => Math.floor(baseValue + Math.random() * variance - variance / 2));
+  };
+
+  // Function to determine trend and color based on data
+  const getTrendColorAndPercentage = (data) => {
+    if (data.length < 2) return { color: 'rgb(234, 179, 8)', bgColor: 'rgba(234, 179, 8, 0.1)', percentage: 0, trend: 'stable', textColor: 'text-amber-600' };
+
+    const firstHalf = data.slice(0, 6);
+    const secondHalf = data.slice(6, 12);
+    const firstAvg = firstHalf.reduce((a, b) => a + b, 0) / firstHalf.length;
+    const secondAvg = secondHalf.reduce((a, b) => a + b, 0) / secondHalf.length;
+
+    const percentChange = ((secondAvg - firstAvg) / firstAvg) * 100;
+
+    // Determine trend: up (>3%), stable (-3% to 3%), down (<-3%)
+    if (percentChange > 3) {
+      return {
+        color: 'rgb(34, 197, 94)',
+        bgColor: 'rgba(34, 197, 94, 0.1)',
+        percentage: percentChange.toFixed(1),
+        trend: 'up',
+        textColor: 'text-green-600'
+      };
+    } else if (percentChange < -3) {
+      return {
+        color: 'rgb(239, 68, 68)',
+        bgColor: 'rgba(239, 68, 68, 0.1)',
+        percentage: Math.abs(percentChange).toFixed(1),
+        trend: 'down',
+        textColor: 'text-red-600'
+      };
+    } else {
+      return {
+        color: 'rgb(234, 179, 8)',
+        bgColor: 'rgba(234, 179, 8, 0.1)',
+        percentage: Math.abs(percentChange).toFixed(1),
+        trend: 'stable',
+        textColor: 'text-amber-600'
+      };
+    }
+  };
+
+  const customerData = generateTrendData(stats?.customers || 45, 15);
+  const customerTrend = getTrendColorAndPercentage(customerData);
+
+  const customerTrendData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+      {
+        label: 'Customers',
+        data: customerData,
+        borderColor: customerTrend.color,
+        backgroundColor: customerTrend.bgColor,
+        tension: 0.4,
+        fill: true,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const orderData = generateTrendData(stats?.orders || 8, 5);
+  const orderTrend = getTrendColorAndPercentage(orderData);
+
+  const orderTrendData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+      {
+        label: 'Orders',
+        data: orderData,
+        borderColor: orderTrend.color,
+        backgroundColor: orderTrend.bgColor,
+        tension: 0.4,
+        fill: true,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const inquiryData = generateTrendData(stats?.inquiries || 12, 8);
+  const inquiryTrend = getTrendColorAndPercentage(inquiryData);
+
+  const inquiryTrendData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+      {
+        label: 'Inquiries',
+        data: inquiryData,
+        borderColor: inquiryTrend.color,
+        backgroundColor: inquiryTrend.bgColor,
+        tension: 0.4,
+        fill: true,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        padding: 12,
+        borderRadius: 8,
+        displayColors: false,
+      },
+    },
+    scales: {
+      x: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6 bg-gray-50 min-h-screen p-6">
+      {/* Header with Settings */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+          <p className="text-sm text-gray-600 mt-1">Welcome to your ERP system</p>
+        </div>
+        <button
+          onClick={() => setShowCustomizer(true)}
+          className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all"
+          title="Customize Dashboard"
+        >
+          <Settings className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Stats Cards with Trends */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Total Customers Card */}
+        {enabledCards.includes('total-customers') && (
+          <DraggableCardWrapper
+            cardId="total-customers"
+            cardTitle="Total Customers"
+            onDragStart={handleDragStart}
+            onDragEnd={handleDragEnd}
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-gray-600 text-sm mb-1">Total Customers</p>
+                  <p className="text-3xl font-bold text-gray-900">{stats?.customers || 0}</p>
+                  <p className={`text-sm ${customerTrend.textColor} mt-1 flex items-center gap-1`}>
+                    {customerTrend.trend === 'up' && <TrendingUp className="w-4 h-4" />}
+                    {customerTrend.trend === 'down' && <TrendingDown className="w-4 h-4" />}
+                    {customerTrend.trend === 'stable' && <Minus className="w-4 h-4" />}
+                    {customerTrend.trend === 'down' ? '-' : '+'}{customerTrend.percentage}% from last month
+                  </p>
+                </div>
+              </div>
+              <div className="h-24">
+                <Line data={customerTrendData} options={chartOptions} />
+              </div>
+            </div>
+          </DraggableCardWrapper>
+        )}
+
+        {/* Active Inquiries Card */}
+        {enabledCards.includes('active-inquiries') && (
+          <DraggableCardWrapper
+            cardId="active-inquiries"
+            cardTitle="Active Inquiries"
+            onDragStart={handleDragStart}
+            onDragEnd={handleDragEnd}
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-gray-600 text-sm mb-1">Active Inquiries</p>
+                  <p className="text-3xl font-bold text-gray-900">{stats?.inquiries || 0}</p>
+                  <p className={`text-sm ${inquiryTrend.textColor} mt-1 flex items-center gap-1`}>
+                    {inquiryTrend.trend === 'up' && <TrendingUp className="w-4 h-4" />}
+                    {inquiryTrend.trend === 'down' && <TrendingDown className="w-4 h-4" />}
+                    {inquiryTrend.trend === 'stable' && <Minus className="w-4 h-4" />}
+                    {inquiryTrend.trend === 'down' ? '-' : '+'}{inquiryTrend.percentage}% from last month
+                  </p>
+                </div>
+              </div>
+              <div className="h-24">
+                <Line data={inquiryTrendData} options={chartOptions} />
+              </div>
+            </div>
+          </DraggableCardWrapper>
+        )}
+
+        {/* Pending Orders Card - DRAGGABLE */}
+        {enabledCards.includes('pending-orders') && (
+          <DraggableCardWrapper
+            cardId="pending-orders"
+            cardTitle="Pending Orders"
+            onDragStart={handleDragStart}
+            onDragEnd={handleDragEnd}
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-gray-600 text-sm mb-1">Pending Orders</p>
+                  <p className="text-3xl font-bold text-gray-900">{stats?.orders || 0}</p>
+                  <p className={`text-sm ${orderTrend.textColor} mt-1 flex items-center gap-1`}>
+                    {orderTrend.trend === 'up' && <TrendingUp className="w-4 h-4" />}
+                    {orderTrend.trend === 'down' && <TrendingDown className="w-4 h-4" />}
+                    {orderTrend.trend === 'stable' && <Minus className="w-4 h-4" />}
+                    {orderTrend.trend === 'down' ? '-' : '+'}{orderTrend.percentage}% from last month
+                  </p>
+                </div>
+              </div>
+              <div className="h-24">
+                <Line data={orderTrendData} options={chartOptions} />
+              </div>
+            </div>
+          </DraggableCardWrapper>
+        )}
+      </div>
+
+      {/* Bottom Row - Admin Insights */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Products Overview - STATIC (No Drag) */}
+        {enabledCards.includes('products-overview') && (
+          <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Products Overview</h3>
+                <p className="text-sm text-gray-600">Total active products</p>
+              </div>
+              <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                <Armchair className="w-6 h-6 text-red-700" />
+              </div>
+            </div>
+            <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.products || 0}</p>
+            <p className="text-sm text-gray-600">All products available</p>
+          </div>
+        )}
+
+        {/* Total Orders (All Time) - DRAGGABLE */}
+        {
+          enabledCards.includes('total-orders') && (
+            <div
+              draggable="true"
+              onDragStart={(e) => {
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('cardId', 'total-orders');
+                e.dataTransfer.setData('cardTitle', 'Total Orders');
+                handleDragStart('total-orders', 'Total Orders');
+              }}
+              onDragEnd={handleDragEnd}
+              className="relative group bg-white rounded-2xl p-6 border border-red-200 shadow-lg cursor-grab active:cursor-grabbing hover:shadow-xl transition-all"
+            >
+              {/* Drag Indicator */}
+              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <GripVertical className="w-4 h-4 text-gray-400" />
+              </div>
+
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Total Orders</h3>
+                  <p className="text-sm text-gray-600">All time</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-red-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.totalOrdersAllTime || 0}</p>
+              <p className="text-sm text-gray-600">
+                <span className="text-red-700 font-medium">{stats?.monthlyOrders || 0}</span> this month
+              </p>
+            </div>
+          )
+        }
+
+        {/* Today's Orders - STATIC (No Drag) */}
+        {
+          enabledCards.includes('todays-orders') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Today's Orders</h3>
+                  <p className="text-sm text-gray-600">Orders created today</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-red-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.todaysOrders || 0}</p>
+              <p className="text-sm text-gray-600">New orders today</p>
+            </div>
+          )
+        }
+      </div >
+
+      {/* Second Row - Revenue & Team Metrics */}
+      < div className="grid grid-cols-1 lg:grid-cols-3 gap-6" >
+        {/* Total Revenue - DRAGGABLE */}
+        {
+          enabledCards.includes('total-revenue') && (
+            <div
+              draggable="true"
+              onDragStart={(e) => {
+                e.dataTransfer.setData('cardId', 'total-revenue');
+                e.dataTransfer.setData('cardTitle', 'Total Revenue');
+                handleDragStart('total-revenue', 'Total Revenue');
+              }}
+              onDragEnd={handleDragEnd}
+              className="relative group bg-white rounded-2xl p-6 border border-red-200 shadow-lg cursor-grab active:cursor-grabbing hover:shadow-xl transition-all"
+            >
+              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <GripVertical className="w-4 h-4 text-gray-400" />
+              </div>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Total Revenue</h3>
+                  <p className="text-sm text-gray-600">All time earnings</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-green-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">
+                ₹{((stats?.totalRevenue || 0) / 100000).toFixed(2)}L
+              </p>
+              <p className="text-sm text-gray-600">
+                <span className="text-green-700 font-medium">
+                  ₹{((stats?.monthlyRevenue || 0) / 1000).toFixed(1)}K
+                </span> this month
+              </p>
+            </div>
+          )
+        }
+
+        {/* Active Salesmen */}
+        {
+          enabledCards.includes('active-salesmen') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Active Salesmen</h3>
+                  <p className="text-sm text-gray-600">Team workforce</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                  <Users className="w-6 h-6 text-blue-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.activeSalesmen || 0}</p>
+              <p className="text-sm text-gray-600">Sales team members</p>
+            </div>
+          )
+        }
+
+        {/* Production Pending */}
+        {
+          enabledCards.includes('production-pending') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Production Pending</h3>
+                  <p className="text-sm text-gray-600">In production pipeline</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-amber-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.productionPending || 0}</p>
+              <p className="text-sm text-gray-600">Orders in workflow</p>
+            </div>
+          )
+        }
+      </div >
+
+      {/* Additional Optional Cards */}
+      < div className="grid grid-cols-1 lg:grid-cols-2 gap-6" >
+        {/* Monthly Revenue */}
+        {
+          enabledCards.includes('monthly-revenue') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Monthly Revenue</h3>
+                  <p className="text-sm text-gray-600">Current month earnings</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-emerald-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">
+                ₹{((stats?.monthlyRevenue || 0) / 1000).toFixed(1)}K
+              </p>
+              <p className="text-sm text-gray-600">This month's revenue</p>
+            </div>
+          )
+        }
+
+        {/* Today's Revenue */}
+        {
+          enabledCards.includes('todays-revenue') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Today's Revenue</h3>
+                  <p className="text-sm text-gray-600">Earnings today</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-lime-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-lime-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">
+                ₹{((stats?.todaysRevenue || 0) / 1000).toFixed(1)}K
+              </p>
+              <p className="text-sm text-gray-600">Revenue generated today</p>
+            </div>
+          )
+        }
+
+        {/* Low Stock Alerts */}
+        {
+          enabledCards.includes('low-stock-alerts') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Low Stock Alerts</h3>
+                  <p className="text-sm text-gray-600">Materials low in inventory</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-red-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.lowStock || 504}</p>
+              <p className="text-sm text-red-600 font-medium">Attention required</p>
+            </div>
+          )
+        }
+
+        {/* Raw Materials Status */}
+        {
+          enabledCards.includes('raw-materials-status') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Raw Materials</h3>
+                  <p className="text-sm text-gray-600">Materials in inventory</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-amber-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.rawMaterialsCount || 0}</p>
+              <p className="text-sm text-gray-600">Total materials tracked</p>
+            </div>
+          )
+        }
+
+        {/* Machine Utilization */}
+        {
+          enabledCards.includes('machine-utilization') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Machine Utilization</h3>
+                  <p className="text-sm text-gray-600">Average utilization</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-violet-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.machineUtilization || 0}%</p>
+              <p className="text-sm text-gray-600">Production efficiency</p>
+            </div>
+          )
+        }
+
+        {/* Maintenance Alerts */}
+        {
+          enabledCards.includes('maintenance-alerts') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Maintenance Due</h3>
+                  <p className="text-sm text-gray-600">Machines need servicing</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-rose-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.maintenanceDue || 0}</p>
+              <p className="text-sm text-gray-600">Require attention</p>
+            </div>
+          )
+        }
+      </div >
+
+      {/* Transport & Delivery Cards */}
+      < div className="grid grid-cols-1 lg:grid-cols-3 gap-6" >
+        {/* Pending Deliveries */}
+        {
+          enabledCards.includes('pending-deliveries') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Pending Deliveries</h3>
+                  <p className="text-sm text-gray-600">Awaiting delivery</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center">
+                  <Package className="w-6 h-6 text-orange-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.pendingDeliveries || 0}</p>
+              <p className="text-sm text-gray-600">Orders to deliver</p>
+            </div>
+          )
+        }
+
+        {/* Completed Deliveries */}
+        {
+          enabledCards.includes('completed-deliveries') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Completed Deliveries</h3>
+                  <p className="text-sm text-gray-600">Successfully delivered</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-green-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.completedDeliveries || 0}</p>
+              <p className="text-sm text-gray-600">This month</p>
+            </div>
+          )
+        }
+
+        {/* In Transit */}
+        {
+          enabledCards.includes('in-transit') && (
+            <div className="bg-white rounded-2xl p-6 border border-red-200 shadow-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">In Transit</h3>
+                  <p className="text-sm text-gray-600">Currently shipping</p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-blue-700" />
+                </div>
+              </div>
+              <p className="text-4xl font-bold text-gray-900 mb-2">{stats?.inTransit || 0}</p>
+              <p className="text-sm text-gray-600">On the way</p>
+            </div>
+          )
+        }
+      </div >
+
+      {/* AI Assistant - Replaces Recent Inquiries */}
+      < AIAssistant />
+
+      {/* New Inquiry Modal */}
+
+      {
+        showInquiryModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
+                <h2 className="text-2xl font-bold text-gray-900">New Inquiry</h2>
+                <button
+                  onClick={handleCloseModal}
+                  className="p-2 hover:bg-gray-100 rounded-full transition"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <form onSubmit={handleInquirySubmit} className="p-6 space-y-6">
+                {/* Customer Information */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <User className="w-5 h-5 text-red-700" />
+                    <h3 className="text-lg font-semibold text-gray-900">Customer Information</h3>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Customer Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="customerName"
+                        value={formData.customerName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter customer name"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Contact Number <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="contact"
+                        value={formData.contact}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter contact number"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Email <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter email"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Address
+                      </label>
+                      <input
+                        type="text"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter address"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Inquiry Details */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Calendar className="w-5 h-5 text-red-700" />
+                    <h3 className="text-lg font-semibold text-gray-900">Inquiry Details</h3>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Enquiry Date <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="date"
+                        name="enquiryDate"
+                        value={formData.enquiryDate}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Enquiry Time <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="time"
+                        name="enquiryTime"
+                        value={formData.enquiryTime}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Status <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        name="status"
+                        value={formData.status}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      >
+                        <option value="new">New</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="resolved">Resolved</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Priority <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        name="priority"
+                        value={formData.priority}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      >
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Lead Platform <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        name="leadPlatform"
+                        value={formData.leadPlatform}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      >
+                        <option value="Website">Website</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Google Ads">Google Ads</option>
+                        <option value="Referral">Referral</option>
+                        <option value="Walk-in">Walk-in</option>
+                        <option value="Phone Call">Phone Call</option>
+                        <option value="Email">Email</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Details */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <Package className="w-5 h-5 text-red-700" />
+                    <h3 className="text-lg font-semibold text-gray-900">Product Details</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Product Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="productName"
+                        value={formData.productName}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter product name"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Product Details
+                      </label>
+                      <textarea
+                        name="productDetails"
+                        value={formData.productDetails}
+                        onChange={handleInputChange}
+                        rows="3"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter detailed product specifications..."
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Message
+                      </label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        rows="3"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="Enter inquiry message or requirements..."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3 justify-end pt-4 border-t">
+                  <button
+                    type="button"
+                    onClick={handleCloseModal}
+                    className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-6 py-2 bg-red-700 text-white rounded-lg hover:bg-red-800 transition font-medium"
+                  >
+                    Create Inquiry
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )
+      }
+
+      {/* Dashboard Customizer Panel */}
+      <DashboardCustomizer
+        isOpen={showCustomizer}
+        onClose={() => setShowCustomizer(false)}
+        enabledCards={enabledCards}
+        onToggleCard={handleToggleCard}
+        onResetLayout={handleResetLayout}
+      />
+
+      {/* Graph Drop Zone - appears when dragging */}
+      <GraphDropZone
+        visible={isDragging}
+        onDrop={handleDrop}
+      />
+
+      {/* Detailed Graph Modal */}
+      <DetailedGraphModal
+        isOpen={showGraphModal}
+        onClose={() => setShowGraphModal(false)}
+        cardType={selectedCard?.id}
+        cardTitle={selectedCard?.title}
+      />
+    </div >
+  );
+};
+
+export default Dashboard;

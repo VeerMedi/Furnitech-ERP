@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Storage</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .info { background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .error { background: #fee; color: #c00; }
+        .success { background: #efe; color: #060; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Debug LocalStorage & API</h1>
+    <div id="output"></div>
+    
+    <script>
+        const output = document.getElementById('output');
+        
+        // Check localStorage
+        output.innerHTML += '<h2>📦 LocalStorage Contents:</h2>';
+        const keys = Object.keys(localStorage);
+        if (keys.length === 0) {
+            output.innerHTML += '<div class="info error">⚠️ LocalStorage is EMPTY!</div>';
+        } else {
+            keys.forEach(key => {
+                const value = localStorage.getItem(key);
+                let displayValue = value;
+                
+                // Try to parse JSON
+                try {
+                    const parsed = JSON.parse(value);
+                    displayValue = JSON.stringify(parsed, null, 2);
+                } catch (e) {
+                    // Not JSON, display as is
+                }
+                
+                output.innerHTML += `
+                    <div class="info">
+                        <strong>${key}:</strong>
+                        <pre>${displayValue}</pre>
+                    </div>
+                `;
+            });
+        }
+        
+        // Check critical keys
+        output.innerHTML += '<h2>🔑 Critical Keys:</h2>';
+        const critical = ['orgToken', 'tenantId', 'orgUser'];
+        critical.forEach(key => {
+            const value = localStorage.getItem(key);
+            const status = value ? '✅' : '❌';
+            const className = value ? 'success' : 'error';
+            output.innerHTML += `
+                <div class="info ${className}">
+                    ${status} <strong>${key}:</strong> ${value ? '✓ Present' : '✗ Missing'}
+                </div>
+            `;
+        });
+        
+        // Test API call
+        output.innerHTML += '<h2>🌐 Testing API Call:</h2>';
+        output.innerHTML += '<div class="info">Calling /api/vendors...</div>';
+        
+        fetch('http://localhost:5001/api/vendors', {
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('orgToken'),
+                'x-tenant-id': localStorage.getItem('tenantId'),
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            output.innerHTML += `
+                <div class="info success">
+                    <strong>✅ API Response:</strong>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                </div>
+            `;
+        })
+        .catch(err => {
+            output.innerHTML += `
+                <div class="info error">
+                    <strong>❌ API Error:</strong>
+                    <pre>${err.message}</pre>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "NOTIF-20251216164210-0": {
+    "id": "NOTIF-20251216164210-0",
+    "role": "PRODUCTION",
+    "title": "New Automation Suggestion",
+    "message": "Quotation Q-101 has been approved. Would you like to create a Production Order?",
+    "task_id": null,
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-16T16:42:10.742047"
+  },
+  "NOTIF-20251216164335-1": {
+    "id": "NOTIF-20251216164335-1",
+    "role": "PRODUCTION",
+    "title": "New Automation Suggestion",
+    "message": "Quotation Q-103 has been approved. Would you like to create a Production Order?",
+    "task_id": null,
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-16T16:43:35.589447"
+  },
+  "NOTIF-20251216164335-2": {
+    "id": "NOTIF-20251216164335-2",
+    "role": "PRODUCTION",
+    "title": "New Task: Execute: Quotation Q-101 has been approved. Would you like to create a Production Order?",
+    "message": "A new task has been assigned to PRODUCTION: Quotation Q-101 has been approved. Would you like to create a Production Order?",
+    "task_id": "TASK-20251216164335-0",
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-16T16:43:35.590186"
+  },
+  "NOTIF-20251216165108-3": {
+    "id": "NOTIF-20251216165108-3",
+    "role": "PRODUCTION",
+    "title": "New Automation Suggestion",
+    "message": "Quotation Q-101 has been approved. Would you like to create a Production Order?",
+    "task_id": null,
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-16T16:51:08.480892"
+  },
+  "NOTIF-20251216165532-4": {
+    "id": "NOTIF-20251216165532-4",
+    "role": "PM",
+    "title": "New Automation Suggestion",
+    "message": "Machine CNC Router M2 has exceeded maintenance threshold (245 hours). Create Maintenance Ticket?",
+    "task_id": null,
+    "priority": "high",
+    "read": false,
+    "created_at": "2025-12-16T16:55:32.540435"
+  },
+  "NOTIF-20251216173058-5": {
+    "id": "NOTIF-20251216173058-5",
+    "role": "PM",
+    "title": "New Task: Execute: Machine CNC Router M2 has exceeded maintenance threshold (245 hours). Create Maintenance Ticket?",
+    "message": "A new task has been assigned to PM: Machine CNC Router M2 has exceeded maintenance threshold (245 hours). Create Maintenance Ticket?",
+    "task_id": "TASK-20251216173058-1",
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-16T17:30:58.819969"
+  },
+  "NOTIF-20251217165440-6": {
+    "id": "NOTIF-20251217165440-6",
+    "role": "PRODUCTION",
+    "title": "New Task: Execute: Quotation Q-103 has been approved. Would you like to create a Production Order?",
+    "message": "A new task has been assigned to PRODUCTION: Quotation Q-103 has been approved. Would you like to create a Production Order?",
+    "task_id": "TASK-20251217165440-2",
+    "priority": "medium",
+    "read": false,
+    "created_at": "2025-12-17T16:54:40.743143"
+  }
+}

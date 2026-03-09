@@ -1,0 +1,166 @@
+
+================================================================================
+                    CLEAN PROJECT STRUCTURE CREATED!
+================================================================================
+
+AI/
+│
+├── 📁 datasets/                          ← ALL TRAINING DATA HERE
+│   └── furniture_floorplan/              ← Your YOLO dataset
+│       ├── images/
+│       │   ├── train/                    ← PUT 70% of images here
+│       │   ├── val/                      ← PUT 20% of images here
+│       │   └── test/                     ← PUT 10% of images here
+│       └── labels/
+│           ├── train/                    ← PUT 70% of labels here (.txt)
+│           ├── val/                      ← PUT 20% of labels here (.txt)
+│           └── test/                     ← PUT 10% of labels here (.txt)
+│
+├── 📁 models/                             ← TRAINED MODELS SAVED HERE
+│   ├── yolo/                             ← YOLO models (base + trained)
+│   │   ├── yolov8n.pt                    ← Base model (small, 6.3 MB) ✓
+│   │   ├── yolov8s.pt                    ← Base model (small, ~22 MB)
+│   │   ├── yolov8m.pt                    ← Base model (medium, ~50 MB)
+│   │   └── furniture_floorplan_latest.pt ← Your trained model (after training)
+│   └── lora_adapters/                    ← LoRA adapters
+│       └── furniture_verification_v1/    ← LoRA adapter (after training)
+│
+├── 📁 test_data/                          ← TEST PDFs HERE
+│   └── ALT-10-Layout1.pdf                ← Your sample (already tested ✓)
+│
+├── 📁 test_results/                       ← ANALYSIS RESULTS HERE
+│   └── result_ALT-10-Layout1.json        ← Result from your test ✓
+│
+├── 📁 logs/                               ← LOGS AND FEEDBACK
+│   ├── yolo_feedback/
+│   └── pass2_corrections/
+│
+└── 📄 Helper Scripts:
+    ├── check_dataset.py                   ← Verify dataset is ready
+    ├── split_dataset.py                   ← Auto-split your data
+    ├── train_yolo_kfold.py               ← Train YOLO model
+    ├── quick_pdf_test.py                 ← Test single PDF
+    └── test_gpu_cuda.py                  ← Verify GPU working ✓
+
+================================================================================
+                            QUICK REFERENCE
+================================================================================
+
+WHERE TO PUT YOUR DATA:
+-----------------------
+
+1. RAW FLOOR PLAN IMAGES (.jpg or .png)
+   → datasets/furniture_floorplan/images/train/  (70%)
+   → datasets/furniture_floorplan/images/val/    (20%)
+   → datasets/furniture_floorplan/images/test/   (10%)
+
+2. YOLO LABELS (.txt files, same name as images)
+   → datasets/furniture_floorplan/labels/train/  (70%)
+   → datasets/furniture_floorplan/labels/val/    (20%)
+   → datasets/furniture_floorplan/labels/test/   (10%)
+
+3. TEST PDFs (for quick testing)
+   → test_data/your_floorplan.pdf
+
+================================================================================
+                            WORKFLOW OPTIONS
+================================================================================
+
+OPTION 1: Manual Organization (You split data yourself)
+--------------------------------------------------------
+1. Annotate your images using Roboflow or LabelImg
+2. Manually split 70/20/10 into train/val/test folders
+3. Verify: python check_dataset.py
+4. Train: python train_yolo_kfold.py
+
+
+OPTION 2: Auto Split (Let script split for you)
+------------------------------------------------
+1. Put ALL images in:     raw_data/images/
+2. Put ALL labels in:     raw_data/labels/
+3. Run: python split_dataset.py --source raw_data
+4. Verify: python check_dataset.py
+5. Train: python train_yolo_kfold.py
+
+
+OPTION 3: Use Roboflow Export (Recommended - Easiest!)
+-------------------------------------------------------
+1. Upload images to Roboflow.com
+2. Annotate online (very easy UI)
+3. Export as "YOLO v8" format
+4. Download will already be split train/val/test!
+5. Copy contents to: datasets/furniture_floorplan/
+6. Verify: python check_dataset.py
+7. Train: python train_yolo_kfold.py
+
+================================================================================
+                            LABEL FORMAT
+================================================================================
+
+Each .txt file contains one line per furniture item:
+
+<class_id> <x_center> <y_center> <width> <height>
+
+Example (floorplan_001.txt):
+0 0.450 0.350 0.120 0.080    ← workstation at center (45%, 35%)
+4 0.750 0.600 0.150 0.100    ← conference table
+13 0.760 0.620 0.020 0.020   ← chair
+
+All values are normalized (0-1):
+- x_center: X position / image_width
+- y_center: Y position / image_height
+- width: Box width / image_width
+- height: Box height / image_height
+
+================================================================================
+                            17 FURNITURE CLASSES
+================================================================================
+
+Class IDs for labels:
+
+Workstations:          Conference/Meeting:        Storage:
+0  - workstation_single    4  - conference_table     6  - pedestal_mobile
+1  - workstation_l_shaped  5  - meeting_table        7  - pedestal_fixed
+2  - workstation_cluster                            8  - storage_low
+3  - executive_desk                                 9  - storage_mid
+                                                   10  - storage_overhead
+Chairs:                                            11  - credenza
+13 - chair_task                                    12  - filing_cabinet
+14 - chair_visitor                                 16  - sofa_lounge
+15 - chair_executive
+
+================================================================================
+                        VERIFICATION COMMANDS
+================================================================================
+
+Check if dataset ready:           python check_dataset.py
+Check GPU working:                python test_gpu_cuda.py
+Test single PDF:                  python quick_pdf_test.py test_data/plan.pdf
+Split existing data:              python split_dataset.py --source raw_data
+Train YOLO:                       python train_yolo_kfold.py
+
+================================================================================
+                        CURRENT STATUS
+================================================================================
+
+✅ Clean directory structure created
+✅ GPU with CUDA working (RTX 3050 6GB)
+✅ All dependencies installed
+✅ Test PDF analyzed successfully (23 items detected)
+✅ Helper scripts ready
+
+⏳ Waiting for: Training data (images + labels)
+
+Minimum to start: 50-100 annotated floor plan images
+Recommended: 500-1000 images for production quality
+
+================================================================================
+
+Quick Start:
+1. Annotate 50-100 images with Roboflow (easiest)
+2. Export as YOLO v8 format
+3. Copy to: AI/datasets/furniture_floorplan/
+4. Run: python check_dataset.py
+5. Run: python train_yolo_kfold.py
+
+================================================================================

@@ -1,0 +1,868 @@
+[
+    {
+        "id": "faq-001",
+        "category": "Quotations",
+        "question": "How do I create a quotation?",
+        "answer": "To create a quotation:\n1. Navigate to **Sales → Quotations**\n2. Click **+ New Quotation**\n3. Select customer and add items\n4. Set pricing and terms\n5. Click **Save & Send**",
+        "keywords": [
+            "create quotation",
+            "new quotation",
+            "quotation",
+            "make quote",
+            "add quotation"
+        ],
+        "roles": [
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-002",
+        "category": "Quotations",
+        "question": "How do I approve a quotation?",
+        "answer": "To approve a quotation:\n1. Go to **Sales → Quotations**\n2. Select the quotation\n3. Review details\n4. Click **Approve** button\n5. Quotation status changes to 'Approved'",
+        "keywords": [
+            "approve quotation",
+            "quotation approval",
+            "accept quote"
+        ],
+        "roles": [
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-003",
+        "category": "Production",
+        "question": "How do I create a production order?",
+        "answer": "To create a production order:\n1. Navigate to **Production → Orders**\n2. Click **+ New Production Order**\n3. Link to approved quotation\n4. Assign team and timeline\n5. Click **Create Order**",
+        "keywords": [
+            "create production order",
+            "production order",
+            "manufacturing",
+            "new production",
+            "make production order"
+        ],
+        "roles": [
+            "production",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-004",
+        "category": "Production",
+        "question": "How do I check production status?",
+        "answer": "To check production status:\n1. Go to **Production → Dashboard**\n2. View WIP (Work In Progress) list\n3. Click any order to see details\n4. Check completion percentage and timeline",
+        "keywords": [
+            "production status",
+            "wip",
+            "check production",
+            "work in progress",
+            "production progress"
+        ],
+        "roles": [
+            "production",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-005",
+        "category": "Inventory",
+        "question": "How do I add inventory items?",
+        "answer": "To add inventory items:\n1. Navigate to **Inventory → Items**\n2. Click **+ Add Item**\n3. Enter material name, category, unit\n4. Set reorder level and threshold\n5. Click **Save**",
+        "keywords": [
+            "add inventory",
+            "new inventory",
+            "add material",
+            "create inventory",
+            "add stock"
+        ],
+        "roles": [
+            "inventory",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-006",
+        "category": "Inventory",
+        "question": "How do I set reorder levels?",
+        "answer": "To set reorder levels:\n1. Go to **Inventory → Items**\n2. Select an item\n3. Click **Edit**\n4. Set **Minimum Threshold** and **Reorder Quantity**\n5. Click **Update**\n\nSystem will alert when stock goes below threshold.",
+        "keywords": [
+            "reorder level",
+            "minimum stock",
+            "threshold",
+            "stock alert",
+            "reorder point"
+        ],
+        "roles": [
+            "inventory"
+        ]
+    },
+    {
+        "id": "faq-007",
+        "category": "Dispatch",
+        "question": "How do I create a dispatch order?",
+        "answer": "To create a dispatch order:\n1. Navigate to **Dispatch → Orders**\n2. Click **+ New Dispatch**\n3. Select completed production order\n4. Add shipping details\n5. Assign transport\n6. Click **Create Dispatch**",
+        "keywords": [
+            "dispatch order",
+            "create dispatch",
+            "shipping",
+            "send order",
+            "delivery"
+        ],
+        "roles": [
+            "transport",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-008",
+        "category": "Dispatch",
+        "question": "How does packing work?",
+        "answer": "Packing workflow:\n1. Production marks order as **Complete**\n2. Packing team receives notification\n3. Items moved to **Packing Area**\n4. Quality check performed\n5. Items packed and labeled\n6. Dispatch order created\n7. Ready for shipping",
+        "keywords": [
+            "packing",
+            "packing process",
+            "quality check",
+            "packing workflow",
+            "packaging"
+        ],
+        "roles": [
+            "transport",
+            "production"
+        ]
+    },
+    {
+        "id": "faq-009",
+        "category": "Employees",
+        "question": "How do I assign a salesperson?",
+        "answer": "To assign a salesperson:\n1. Go to **Sales → Inquiries**\n2. Click on an inquiry\n3. Click **Assign Salesperson**\n4. System shows AI recommendations\n5. Select from recommended list or choose manually\n6. Click **Assign**",
+        "keywords": [
+            "assign salesperson",
+            "salesperson assignment",
+            "assign sales",
+            "add salesperson"
+        ],
+        "roles": [
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-010",
+        "category": "Employees",
+        "question": "How do employee recommendations work?",
+        "answer": "AI Employee Recommendations:\n- System analyzes **workload**, **performance**, **specialization**\n- Considers current capacity and past success\n- Provides top 3 recommendations with scores\n- Shows reasoning for each suggestion\n- You can accept or manually override",
+        "keywords": [
+            "employee recommendation",
+            "ai recommendation",
+            "assign employee",
+            "staff recommendation",
+            "team assignment"
+        ],
+        "roles": [
+            "sales",
+            "production",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-011",
+        "category": "Automation",
+        "question": "What is Smart Task Automation?",
+        "answer": "Smart Task Automation:\n- AI monitors quotations, production, inventory, machines\n- Generates **suggestions** for next actions\n- You must **[Confirm]** or **[Dismiss]** each suggestion\n- Tasks assigned to appropriate roles\n- No automatic execution - you stay in control",
+        "keywords": [
+            "automation",
+            "smart automation",
+            "ai tasks",
+            "task automation",
+            "intelligent tasks"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-012",
+        "category": "Automation",
+        "question": "How do I confirm automation suggestions?",
+        "answer": "To confirm automation suggestions:\n1. Go to **Automation** dashboard\n2. View pending suggestions\n3. Review the AI message\n4. Click **[Confirm]** to create task\n5. Click **[Dismiss]** to reject\n\nConfirmed tasks appear in role-specific dashboards.",
+        "keywords": [
+            "confirm suggestion",
+            "automation suggestion",
+            "approve automation",
+            "accept suggestion",
+            "approve task"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-013",
+        "category": "System",
+        "question": "How do I add a vendor?",
+        "answer": "To add a vendor:\n1. Navigate to **Inventory → Vendors**\n2. Click **+ Add Vendor**\n3. Enter company name, contact details\n4. Add materials they supply\n5. Set payment terms\n6. Click **Save**",
+        "keywords": [
+            "add vendor",
+            "new vendor",
+            "supplier",
+            "create vendor",
+            "add supplier"
+        ],
+        "roles": [
+            "inventory",
+            "accounts"
+        ]
+    },
+    {
+        "id": "faq-014",
+        "category": "System",
+        "question": "What is pre-production?",
+        "answer": "**Pre-Production** is the planning phase:\n- Material availability checked\n- Machine capacity verified\n- Team assigned\n- Timeline planned\n- Design finalized\n\nOnce complete, order moves to **Production** phase.",
+        "keywords": [
+            "pre-production",
+            "pre production",
+            "planning phase",
+            "production planning"
+        ],
+        "roles": [
+            "production",
+            "design"
+        ]
+    },
+    {
+        "id": "faq-015",
+        "category": "Reports",
+        "question": "How do I view sales reports?",
+        "answer": "To view sales reports:\n1. Go to **Reports → Sales**\n2. Select date range\n3. Choose report type (Revenue, Conversions, etc.)\n4. Click **Generate**\n5. Export as PDF or Excel if needed",
+        "keywords": [
+            "sales report",
+            "revenue report",
+            "reports",
+            "view reports",
+            "sales analytics"
+        ],
+        "roles": [
+            "sales",
+            "accounts",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-016",
+        "category": "Reports",
+        "question": "How do I check customer insights?",
+        "answer": "To check customer insights:\n1. Navigate to **Insights → Customer Insights**\n2. View CLV (Customer Lifetime Value)\n3. See repeat order rates\n4. Check regional preferences\n5. Get AI-powered recommendations",
+        "keywords": [
+            "customer insights",
+            "clv",
+            "customer analytics",
+            "customer value",
+            "customer data"
+        ],
+        "roles": [
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-017",
+        "category": "Machines",
+        "question": "How do I schedule machine maintenance?",
+        "answer": "To schedule machine maintenance:\n1. Go to **Production → Machines**\n2. Select a machine\n3. Click **Schedule Maintenance**\n4. Set date and type (Preventive/Corrective)\n5. Assign technician\n6. Click **Schedule**",
+        "keywords": [
+            "machine maintenance",
+            "schedule maintenance",
+            "preventive maintenance",
+            "machine service",
+            "maintenance schedule"
+        ],
+        "roles": [
+            "pm",
+            "production"
+        ]
+    },
+    {
+        "id": "faq-018",
+        "category": "Machines",
+        "question": "How do I check machine usage?",
+        "answer": "To check machine usage:\n1. Navigate to **Production → Machines**\n2. View usage dashboard\n3. See run hours vs threshold\n4. Check efficiency metrics\n5. Review maintenance due dates",
+        "keywords": [
+            "machine usage",
+            "machine hours",
+            "machine efficiency",
+            "machine utilization",
+            "machine stats"
+        ],
+        "roles": [
+            "production",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-019",
+        "category": "Tasks",
+        "question": "How do I view my tasks?",
+        "answer": "To view your tasks:\n1. Go to **Dashboard** (role-specific)\n2. See **My Tasks** section\n3. Filter by status (Pending/Completed)\n4. Click task to view details\n5. Mark complete when done",
+        "keywords": [
+            "my tasks",
+            "task list",
+            "pending tasks",
+            "view tasks",
+            "task dashboard"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-020",
+        "category": "Tasks",
+        "question": "How do I mark a task complete?",
+        "answer": "To mark a task complete:\n1. Open the task\n2. Add completion notes (optional)\n3. Click **Mark as Complete**\n4. Task moves to completed list\n5. Notification sent to relevant team",
+        "keywords": [
+            "complete task",
+            "mark complete",
+            "finish task",
+            "task done",
+            "close task"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-021",
+        "category": "AI Features",
+        "question": "What is the RAG AI Chat Assistant?",
+        "answer": "**RAG (Retrieval Augmented Generation) AI Assistant:**\n\n- 🧠 Intelligent chat assistant on your dashboard\n- 📊 Answers questions about your real-time business data\n- 🔍 Queries MongoDB to fetch accurate information\n- 💡 Provides insights on inquiries, orders, inventory, payments\n- 📈 Generates data-driven recommendations\n\n**Example queries:**\n- \"Show me all pending inquiries\"\n- \"How many vendors do we have?\"\n- \"What's the status of recent orders?\"",
+        "keywords": [
+            "rag",
+            "ai chat",
+            "ai assistant",
+            "chatbot",
+            "intelligent assistant",
+            "rag system",
+            "data chat"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-022",
+        "category": "AI Features",
+        "question": "How does the Voice AI Assistant work?",
+        "answer": "**Voice AI Assistant (Vapi Integration):**\n\n- 🎤 Click the voice button to start talking\n- 🗣️ Speak naturally about your needs\n- 🤖 AI understands and responds with voice\n- 📞 Works like a virtual assistant for your ERP\n\n**Use cases:**\n- Quick status checks while multitasking\n- Hands-free data queries\n- Accessibility for easier navigation",
+        "keywords": [
+            "voice assistant",
+            "vapi",
+            "voice ai",
+            "speak to ai",
+            "voice chat",
+            "talk to system"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-023",
+        "category": "AI Features",
+        "question": "What are AI Inventory Recommendations?",
+        "answer": "**AI Inventory Recommendations:**\n\n📦 System analyzes:\n- Stock levels and usage patterns\n- Low stock items near threshold\n- Historical consumption rates\n- Upcoming production needs\n\n✅ **Actions:**\n1. View suggestions in Inventory Dashboard\n2. Review AI reasoning\n3. Click **[Confirm]** to create Purchase Order\n4. Click **[Dismiss]** if not needed\n\n💡 Helps prevent stockouts and optimize inventory.",
+        "keywords": [
+            "inventory ai",
+            "inventory recommendation",
+            "stock recommendation",
+            "ai inventory",
+            "smart inventory",
+            "reorder suggestion"
+        ],
+        "roles": [
+            "inventory",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-024",
+        "category": "AI Features",
+        "question": "How do AI employee assignments work?",
+        "answer": "**AI-Powered Employee Assignment:**\n\n🎯 System considers:\n- Current workload of each employee\n- Past performance on similar tasks\n- Specialization and expertise\n- Availability and capacity\n\n**Process:**\n1. System provides top 3 recommendations\n2. Shows confidence score for each\n3. Displays reasoning (e.g., \"Low workload + High expertise\")\n4. You can accept suggestion or override manually\n\n✨ Balances workload and optimizes productivity.",
+        "keywords": [
+            "employee ai",
+            "staff assignment ai",
+            "smart assignment",
+            "ai assignment",
+            "workload balancing",
+            "employee recommendation"
+        ],
+        "roles": [
+            "sales",
+            "production",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-025",
+        "category": "AI Features",
+        "question": "What AI automation features are available?",
+        "answer": "**Smart Task Automation Features:**\n\n⚡ **Automated Suggestions For:**\n- Purchase Orders when inventory is low\n- Machine maintenance when hours exceed threshold\n- Production scheduling for approved quotations\n- Dispatch creation for completed orders\n\n🛡️ **Safety:**\n- AI suggests, you approve\n- No auto-execution without confirmation\n- Full transparency on AI reasoning\n- Easy to dismiss any suggestion\n\n📊 Access via **Automation Dashboard**",
+        "keywords": [
+            "ai automation",
+            "automation features",
+            "smart automation",
+            "ai suggestions",
+            "automation types",
+            "ai capabilities"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-026",
+        "category": "Analytics",
+        "question": "How do I use the Analytics Dashboard?",
+        "answer": "**Analytics Dashboard:**\n\n📊 **Access:** Dashboard → Analytics Section\n\n**Features:**\n- 📈 Sales trends and revenue charts\n- 🏭 Production efficiency metrics\n- 📦 Inventory turnover rates\n- 💰 Financial performance indicators\n- 🎯 KPI tracking\n\n**Customization:**\n1. Select date range\n2. Choose metrics to display\n3. Compare periods\n4. Export reports\n5. Share with team",
+        "keywords": [
+            "analytics",
+            "dashboard analytics",
+            "metrics",
+            "kpi",
+            "performance dashboard",
+            "data analytics"
+        ],
+        "roles": [
+            "pm",
+            "poc",
+            "accounts"
+        ]
+    },
+    {
+        "id": "faq-027",
+        "category": "Analytics",
+        "question": "How do I export data and reports?",
+        "answer": "**Export Data:**\n\n📤 **Available formats:**\n- PDF (for sharing/printing)\n- Excel (for analysis)\n- CSV (for data processing)\n\n**Steps:**\n1. Navigate to desired report/dashboard\n2. Click **Export** button (top right)\n3. Select format\n4. Choose date range\n5. Click **Download**\n\n💡 Exports include charts, tables, and raw data.",
+        "keywords": [
+            "export data",
+            "download report",
+            "export excel",
+            "export pdf",
+            "export csv",
+            "data export"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-028",
+        "category": "Analytics",
+        "question": "What KPIs can I track?",
+        "answer": "**Key Performance Indicators (KPIs):**\n\n**Sales:**\n- Lead conversion rate\n- Quotation success rate\n- Revenue per customer\n- Sales cycle time\n\n**Production:**\n- On-time delivery rate\n- Production efficiency\n- Machine utilization\n- Quality defect rate\n\n**Inventory:**\n- Stock turnover ratio\n- Stockout frequency\n- Carrying cost\n\n**Financial:**\n- Profit margin\n- Cash flow\n- Payment collection rate",
+        "keywords": [
+            "kpi",
+            "key performance indicators",
+            "metrics",
+            "performance metrics",
+            "track kpi",
+            "business metrics"
+        ],
+        "roles": [
+            "pm",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-029",
+        "category": "Analytics",
+        "question": "How do I create custom reports?",
+        "answer": "**Create Custom Reports:**\n\n1. Go to **Reports → Custom Reports**\n2. Click **+ New Report**\n3. Select data sources (Inquiries, Orders, etc.)\n4. Choose metrics and dimensions\n5. Add filters (date, status, role)\n6. Configure visualization (chart/table)\n7. Click **Save Report**\n\n**Reuse:**\n- Saved reports appear in \"My Reports\"\n- Schedule automatic generation\n- Share with team members",
+        "keywords": [
+            "custom reports",
+            "create report",
+            "custom analytics",
+            "build report",
+            "report builder"
+        ],
+        "roles": [
+            "pm",
+            "poc",
+            "accounts"
+        ]
+    },
+    {
+        "id": "faq-030",
+        "category": "Troubleshooting",
+        "question": "I can't log in. What should I do?",
+        "answer": "**Login Issues:**\n\n🔐 **Common Solutions:**\n\n1. **Check credentials:**\n   - Verify username/email\n   - Check CAPS LOCK is off\n   - Ensure correct password\n\n2. **Reset password:**\n   - Click \"Forgot Password\"\n   - Check email for reset link\n   - Create new password\n\n3. **Clear browser cache:**\n   - Clear cookies and cache\n   - Try incognito/private mode\n\n4. **Contact admin:**\n   - Your account may be locked\n   - Reach out to system administrator",
+        "keywords": [
+            "login issue",
+            "can't login",
+            "login problem",
+            "forgot password",
+            "login error",
+            "access denied"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-031",
+        "category": "Troubleshooting",
+        "question": "Data is not updating. How do I fix this?",
+        "answer": "**Data Sync Issues:**\n\n🔄 **Quick Fixes:**\n\n1. **Refresh the page** (F5 or Ctrl+R)\n2. **Clear browser cache**\n3. **Check internet connection**\n4. **Log out and log back in**\n\n⚠️ **If issue persists:**\n- Check if other users face same issue\n- Note down what data isn't updating\n- Contact technical support\n- Provide: timestamp, module, action taken\n\n💡 System may be performing maintenance - check notifications.",
+        "keywords": [
+            "data not updating",
+            "sync issue",
+            "refresh data",
+            "data sync",
+            "stale data",
+            "data refresh"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-032",
+        "category": "Troubleshooting",
+        "question": "Why is the system slow?",
+        "answer": "**Performance Issues:**\n\n🐌 **Common Causes & Fixes:**\n\n1. **Too many browser tabs:**\n   - Close unused tabs\n   - Restart browser\n\n2. **Large data loads:**\n   - Use date filters to limit data\n   - Export instead of viewing all\n\n3. **Internet speed:**\n   - Check connection speed\n   - Try wired connection\n\n4. **Browser issues:**\n   - Update to latest browser\n   - Clear cache and cookies\n   - Try different browser\n\n⏰ **Peak hours:** System may be slower during business hours.",
+        "keywords": [
+            "slow system",
+            "performance issue",
+            "system lag",
+            "slow loading",
+            "response time",
+            "system speed"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-033",
+        "category": "Troubleshooting",
+        "question": "I got an error message. What should I do?",
+        "answer": "**Handling Error Messages:**\n\n❌ **Steps to take:**\n\n1. **Take a screenshot** of the error\n2. **Note the error code** if shown\n3. **Remember what you were doing** when error occurred\n4. **Try again** - may be temporary\n5. **Refresh the page**\n\n📝 **Report to support:**\n- Screenshot of error\n- Error code/message\n- What action triggered it\n- Your role and module\n- Date and time\n\n💡 **Common fixes:**\n- Log out and log in\n- Clear browser cache\n- Try different browser",
+        "keywords": [
+            "error message",
+            "error",
+            "system error",
+            "error code",
+            "error handling",
+            "bug report"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-034",
+        "category": "Troubleshooting",
+        "question": "Changes I made are not saved. Why?",
+        "answer": "**Save Issues:**\n\n💾 **Common Reasons:**\n\n1. **Didn't click Save button**\n   - Always click Save/Submit\n   - Look for confirmation message\n\n2. **Session timeout**\n   - You were logged out due to inactivity\n   - Log in and try again\n\n3. **Validation errors**\n   - Check for red error messages\n   - Fill all required fields\n   - Fix invalid data\n\n4. **Network interruption**\n   - Check internet connection\n   - Retry saving\n\n💡 **Best practice:** Wait for \"Successfully saved\" message before navigating away.",
+        "keywords": [
+            "not saved",
+            "save issue",
+            "changes not saved",
+            "data not saving",
+            "save error",
+            "lost changes"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-035",
+        "category": "Troubleshooting",
+        "question": "I can't find a feature or menu. Where is it?",
+        "answer": "**Navigation Help:**\n\n🔍 **Finding Features:**\n\n1. **Use search bar** (top of dashboard)\n2. **Check role permissions** - feature may not be available for your role\n3. **Look in related modules:**\n   - Sales features → Sales menu\n   - Production → Production menu\n   - Inventory → Inventory menu\n\n4. **Ask AI Assistant:**\n   - Click floating help button\n   - Type \"Where is [feature]?\"\n\n📞 **Still can't find it?**\n- Contact your manager\n- Check if you have required permissions\n- Feature may be in different module",
+        "keywords": [
+            "can't find",
+            "where is feature",
+            "missing menu",
+            "navigation help",
+            "find feature",
+            "locate function"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-036",
+        "category": "Troubleshooting",
+        "question": "Mobile app is not working properly. What to do?",
+        "answer": "**Mobile App Issues:**\n\n📱 **Troubleshooting:**\n\n1. **Update the app:**\n   - Check App Store/Play Store\n   - Install latest version\n\n2. **Restart the app:**\n   - Force close app\n   - Reopen\n\n3. **Check permissions:**\n   - Settings → App Permissions\n   - Enable required permissions\n\n4. **Clear app cache:**\n   - Settings → Apps → Vlite ERP\n   - Clear Cache (not data)\n\n5. **Reinstall if needed:**\n   - Uninstall app\n   - Download fresh copy\n\n💡 **Use web version** as temporary alternative.",
+        "keywords": [
+            "mobile app",
+            "app issue",
+            "mobile problem",
+            "app not working",
+            "mobile error",
+            "app troubleshooting"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-037",
+        "category": "Troubleshooting",
+        "question": "Notifications are not working. How do I fix this?",
+        "answer": "**Notification Issues:**\n\n🔔 **Enable Notifications:**\n\n1. **Browser Settings:**\n   - Check browser allows notifications\n   - Enable for this site\n\n2. **System Settings:**\n   - Profile → Notification Settings\n   - Toggle notifications ON\n   - Select notification types\n\n3. **Email Notifications:**\n   - Check spam/junk folder\n   - Add system to safe senders\n   - Verify email address is correct\n\n4. **Push Notifications (Mobile):**\n   - Phone Settings → App Notifications\n   - Enable for Vlite ERP app\n\n💡 Test by creating a task for yourself.",
+        "keywords": [
+            "notifications",
+            "notification issue",
+            "no notifications",
+            "alerts not working",
+            "push notifications",
+            "email alerts"
+        ],
+        "roles": [
+            "all"
+        ]
+    },
+    {
+        "id": "faq-038",
+        "category": "Advanced Workflows",
+        "question": "How do multi-stage approvals work?",
+        "answer": "**Multi-Stage Approval Workflow:**\n\n✅ **Process:**\n\n1. **Quotation Created** → Status: Draft\n2. **First Approval** (Sales Manager) → Status: Reviewed\n3. **Second Approval** (Finance/POC) → Status: Approved\n4. **Final State** → Ready for Production\n\n**Configuration:**\n- Settings → Approval Workflows\n- Define approval stages\n- Assign approvers by role\n- Set approval thresholds (e.g., >₹1L needs CFO approval)\n\n⏱️ **Track:** View approval status in workflow timeline.",
+        "keywords": [
+            "multi-stage approval",
+            "approval workflow",
+            "multi-level approval",
+            "approval process",
+            "approval hierarchy"
+        ],
+        "roles": [
+            "sales",
+            "poc",
+            "accounts"
+        ]
+    },
+    {
+        "id": "faq-039",
+        "category": "Advanced Workflows",
+        "question": "Can I customize field requirements?",
+        "answer": "**Custom Field Configuration:**\n\n⚙️ **Admin Access Required**\n\n**Steps:**\n1. Go to **Settings → Field Configuration**\n2. Select module (Sales, Production, etc.)\n3. Choose form/entity\n4. For each field:\n   - Set as Required/Optional\n   - Add validation rules\n   - Set default values\n   - Add help text\n5. Click **Save Configuration**\n\n**Use cases:**\n- Make certain fields mandatory\n- Hide unused fields\n- Add company-specific fields\n\n⚠️ **Note:** Changes affect all users immediately.",
+        "keywords": [
+            "custom fields",
+            "field configuration",
+            "customize fields",
+            "field requirements",
+            "mandatory fields",
+            "field settings"
+        ],
+        "roles": [
+            "pm",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-040",
+        "category": "Advanced Workflows",
+        "question": "How do I set up automated workflows?",
+        "answer": "**Automated Workflow Setup:**\n\n🤖 **Configuration:**\n\n1. **Navigate:** Settings → Automation → Workflows\n2. **Create workflow:**\n   - Choose trigger (e.g., \"Quotation Approved\")\n   - Define conditions (e.g., \"Amount > ₹50k\")\n   - Set actions (e.g., \"Create Production Order\")\n   - Assign notifications\n\n**Example workflows:**\n- Quotation approved → Auto-create production order\n- Stock < threshold → Generate PO suggestion\n- Order completed → Trigger dispatch process\n\n⚙️ **Test** workflow before enabling for all.",
+        "keywords": [
+            "automated workflow",
+            "workflow automation",
+            "automate process",
+            "workflow setup",
+            "automation rules"
+        ],
+        "roles": [
+            "pm",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-041",
+        "category": "Advanced Workflows",
+        "question": "Can I integrate with other software?",
+        "answer": "**Third-Party Integrations:**\n\n🔗 **Available Integrations:**\n\n**Accounting:**\n- Tally ERP\n- QuickBooks\n- Zoho Books\n\n**Communication:**\n- WhatsApp Business API\n- Email (SMTP)\n- Slack\n\n**Payment:**\n- Razorpay\n- PayU\n- Bank APIs\n\n**Setup:**\n1. Settings → Integrations\n2. Select integration\n3. Enter API credentials\n4. Configure sync settings\n5. Test connection\n\n📞 **Need custom integration?** Contact support.",
+        "keywords": [
+            "integration",
+            "third party",
+            "api integration",
+            "connect software",
+            "external integration",
+            "software integration"
+        ],
+        "roles": [
+            "pm",
+            "poc",
+            "accounts"
+        ]
+    },
+    {
+        "id": "faq-042",
+        "category": "Advanced Workflows",
+        "question": "How do I create templates for quotations?",
+        "answer": "**Quotation Templates:**\n\n📋 **Create Template:**\n\n1. **Sales → Templates → + New Template**\n2. **Configure:**\n   - Template name (e.g., \"Standard Office Furniture\")\n   - Pre-fill common items\n   - Set default pricing\n   - Add terms & conditions\n   - Include payment terms\n3. **Save Template**\n\n**Use Template:**\n1. Create new quotation\n2. Click \"Load Template\"\n3. Select template\n4. Customize as needed\n5. Send to customer\n\n💡 **Benefits:** Save time, ensure consistency, reduce errors.",
+        "keywords": [
+            "quotation template",
+            "template",
+            "quote template",
+            "quotation format",
+            "create template",
+            "reusable quotation"
+        ],
+        "roles": [
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-043",
+        "category": "Advanced Workflows",
+        "question": "How do I handle returns and refunds?",
+        "answer": "**Returns & Refunds Process:**\n\n↩️ **Steps:**\n\n1. **Customer initiates return request**\n2. **Go to:** Orders → Select Order → **Return/Refund**\n3. **Fill details:**\n   - Reason for return\n   - Items being returned\n   - Refund amount or replacement\n   - Quality issue notes\n4. **Approval workflow triggered**\n5. **Once approved:**\n   - Inventory updated\n   - Refund processed\n   - Accounts notified\n\n📊 **Track:** Returns Dashboard shows all return requests and status.",
+        "keywords": [
+            "returns",
+            "refunds",
+            "return process",
+            "refund process",
+            "return order",
+            "product return"
+        ],
+        "roles": [
+            "sales",
+            "accounts",
+            "inventory"
+        ]
+    },
+    {
+        "id": "faq-044",
+        "category": "Advanced Workflows",
+        "question": "How do I manage multiple warehouse locations?",
+        "answer": "**Multi-Warehouse Management:**\n\n🏭 **Setup:**\n\n1. **Settings → Warehouses → + Add Location**\n2. **For each warehouse:**\n   - Location name\n   - Address\n   - Manager assigned\n   - Inventory categories\n\n**Operations:**\n- **View stock by location:** Inventory → Filter by warehouse\n- **Transfer stock:** Inventory → Transfer → Select source & destination\n- **Dispatch from specific location:** Set in dispatch order\n\n📊 **Analytics:** View utilization per warehouse, transfer history, location-wise stock levels.",
+        "keywords": [
+            "warehouse",
+            "multiple warehouses",
+            "warehouse management",
+            "inventory location",
+            "warehouse transfer",
+            "stock location"
+        ],
+        "roles": [
+            "inventory",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-045",
+        "category": "Financial",
+        "question": "How do I track payments from customers?",
+        "answer": "**Customer Payment Tracking:**\n\n💰 **Process:**\n\n1. **Accounts → Payments → Receivables**\n2. **View:**\n   - Pending payments\n   - Overdue amounts\n   - Payment history\n   - Credit period remaining\n\n**Record Payment:**\n1. Select invoice/order\n2. Click **Record Payment**\n3. Enter amount, date, mode\n4. Upload proof (optional)\n5. Save\n\n📊 **Reports:**\n- Aging report (30/60/90 days)\n- Payment collection efficiency\n- Customer-wise outstanding\n\n🔔 **Reminders:** System sends auto-reminders for overdue payments.",
+        "keywords": [
+            "payments",
+            "customer payment",
+            "payment tracking",
+            "receivables",
+            "payment status",
+            "outstanding payment"
+        ],
+        "roles": [
+            "accounts",
+            "sales",
+            "poc"
+        ]
+    },
+    {
+        "id": "faq-046",
+        "category": "Financial",
+        "question": "How do I generate invoices?",
+        "answer": "**Invoice Generation:**\n\n📄 **Create Invoice:**\n\n1. **Accounts → Invoices → + New Invoice**\n2. **Or:** Auto-generate from approved quotation\n3. **Invoice details:**\n   - Customer information\n   - Items and quantities\n   - Pricing (including GST/taxes)\n   - Payment terms\n   - Due date\n4. **Preview invoice**\n5. **Save & Send** (email to customer)\n\n**Formats:**\n- PDF download\n- Email directly\n- Print\n\n💡 **Customization:** Settings → Invoice Template to customize logo, format, terms.",
+        "keywords": [
+            "invoice",
+            "create invoice",
+            "generate invoice",
+            "billing",
+            "invoice generation",
+            "invoicing"
+        ],
+        "roles": [
+            "accounts",
+            "sales"
+        ]
+    },
+    {
+        "id": "faq-047",
+        "category": "Financial",
+        "question": "How do I track vendor payments?",
+        "answer": "**Vendor Payment Management:**\n\n💸 **Track Payables:**\n\n1. **Accounts → Payments → Payables**\n2. **View:**\n   - Pending vendor payments\n   - Purchase orders awaiting payment\n   - Payment schedules\n   - Vendor-wise dues\n\n**Make Payment:**\n1. Select vendor/PO\n2. Click **Make Payment**\n3. Enter amount, payment mode\n4. Upload transaction proof\n5. Save record\n\n📊 **Reports:**\n- Vendor payment history\n- Outstanding dues by vendor\n- Payment forecast\n\n⏰ **Reminders:** Set payment due date alerts.",
+        "keywords": [
+            "vendor payment",
+            "payables",
+            "vendor dues",
+            "supplier payment",
+            "payment to vendor",
+            "accounts payable"
+        ],
+        "roles": [
+            "accounts",
+            "inventory"
+        ]
+    },
+    {
+        "id": "faq-048",
+        "category": "Financial",
+        "question": "How do I check profit margins?",
+        "answer": "**Profit Margin Analysis:**\n\n📊 **View Margins:**\n\n1. **Reports → Financial → Profit Analysis**\n2. **Select:**\n   - Date range\n   - Product category\n   - Customer segment\n\n**Metrics shown:**\n- Gross margin %\n- Net margin %\n- Margin by product\n- Margin by customer\n- Trend over time\n\n**Order-level margin:**\n- Go to specific order\n- View \"Profitability\" tab\n- See: Revenue - (Material + Labor + Overhead) = Profit\n\n💡 **Use insights** to optimize pricing and reduce costs.",
+        "keywords": [
+            "profit margin",
+            "margin analysis",
+            "profitability",
+            "profit calculation",
+            "margin report",
+            "financial analysis"
+        ],
+        "roles": [
+            "accounts",
+            "poc",
+            "sales"
+        ]
+    },
+    {
+        "id": "faq-049",
+        "category": "Financial",
+        "question": "How do I manage expense tracking?",
+        "answer": "**Expense Management:**\n\n💳 **Track Expenses:**\n\n1. **Accounts → Expenses → + Add Expense**\n2. **Enter:**\n   - Expense category (Materials, Utilities, Salaries, etc.)\n   - Amount\n   - Date\n   - Description\n   - Receipt/proof (upload)\n3. **Assign to:** Project/Order (optional)\n4. **Save**\n\n**Categories:**\n- Raw materials\n- Labor\n- Utilities\n- Maintenance\n- Marketing\n- Office expenses\n\n📊 **Reports:** View expense trends, category-wise breakdown, cost centers.",
+        "keywords": [
+            "expenses",
+            "expense tracking",
+            "business expenses",
+            "cost tracking",
+            "expense management",
+            "expenditure"
+        ],
+        "roles": [
+            "accounts",
+            "pm"
+        ]
+    },
+    {
+        "id": "faq-050",
+        "category": "System",
+        "question": "How do I change my password?",
+        "answer": "**Change Password:**\n\n🔐 **Steps:**\n\n1. Click **Profile Icon** (top right)\n2. Select **Account Settings**\n3. Go to **Security** tab\n4. Click **Change Password**\n5. Enter:\n   - Current password\n   - New password\n   - Confirm new password\n6. Click **Update Password**\n\n**Password Requirements:**\n- Minimum 8 characters\n- At least 1 uppercase letter\n- At least 1 number\n- At least 1 special character\n\n💡 **Best practice:** Change password every 90 days.",
+        "keywords": [
+            "change password",
+            "password",
+            "reset password",
+            "update password",
+            "password change",
+            "security"
+        ],
+        "roles": [
+            "all"
+        ]
+    }
+]

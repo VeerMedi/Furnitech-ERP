@@ -1,0 +1,261 @@
+{
+  "items": [
+    {
+      "name": "L-shaped workstation with pedestal and partition",
+      "category": "Workstations",
+      "area": "Workstation Area",
+      "raw_label": "WKS(1350x1500x600) 34 NOS",
+      "dimensions": "1350x1500x600mm",
+      "count": 34,
+      "status": "unknown",
+      "confidence": 1.0,
+      "notes": "Dimensions clearly labeled on drawing as WKS(1350x1500x600) 34 NOS"
+    },
+    {
+      "name": "Task chair for workstation",
+      "category": "Seating",
+      "area": "Workstation Area",
+      "raw_label": "CHAIRS - ALL EXISTING RE USED",
+      "dimensions": "unknown",
+      "count": 34,
+      "status": "existing reused",
+      "confidence": 1.0,
+      "notes": "One chair per workstation, status from label 'CHAIRS - ALL EXISTING RE USED'"
+    },
+    {
+      "name": "Pedestal for workstation",
+      "category": "Storage",
+      "area": "Workstation Area",
+      "raw_label": "WKS(1350x1500x600) 34 NOS",
+      "dimensions": "unknown",
+      "count": 34,
+      "status": "unknown",
+      "confidence": 0.9,
+      "notes": "One pedestal per workstation visible in drawing"
+    },
+    {
+      "name": "Executive desk",
+      "category": "Workstations",
+      "area": "CABIN-01",
+      "raw_label": "CABIN-01",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "L-shaped executive desk visible in cabin"
+    },
+    {
+      "name": "Executive chair",
+      "category": "Seating",
+      "area": "CABIN-01",
+      "raw_label": "CABIN-01",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Chair for executive desk"
+    },
+    {
+      "name": "Visitor chairs",
+      "category": "Seating",
+      "area": "CABIN-01",
+      "raw_label": "CABIN-01",
+      "dimensions": "unknown",
+      "count": 2,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Two visitor chairs visible in front of desk"
+    },
+    {
+      "name": "Executive desk",
+      "category": "Workstations",
+      "area": "CABIN-02",
+      "raw_label": "CABIN-02",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "L-shaped executive desk visible in cabin"
+    },
+    {
+      "name": "Executive chair",
+      "category": "Seating",
+      "area": "CABIN-02",
+      "raw_label": "CABIN-02",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Chair for executive desk"
+    },
+    {
+      "name": "Visitor chairs",
+      "category": "Seating",
+      "area": "CABIN-02",
+      "raw_label": "CABIN-02",
+      "dimensions": "unknown",
+      "count": 2,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Two visitor chairs visible in front of desk"
+    },
+    {
+      "name": "Conference table",
+      "category": "Tables",
+      "area": "CONFERENCE/DEMO ROOM",
+      "raw_label": "CONFERENCE/DEMO ROOM",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.9,
+      "notes": "Large conference table visible in center of room"
+    },
+    {
+      "name": "Conference chairs",
+      "category": "Seating",
+      "area": "CONFERENCE/DEMO ROOM",
+      "raw_label": "CONFERENCE/DEMO ROOM",
+      "dimensions": "unknown",
+      "count": 12,
+      "status": "existing reused",
+      "confidence": 0.9,
+      "notes": "Chairs arranged around conference table"
+    },
+    {
+      "name": "Meeting table",
+      "category": "Tables",
+      "area": "MEETING-01",
+      "raw_label": "MEETING-01",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "Meeting table visible in room"
+    },
+    {
+      "name": "Meeting chairs",
+      "category": "Seating",
+      "area": "MEETING-01",
+      "raw_label": "MEETING-01",
+      "dimensions": "unknown",
+      "count": 4,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Four chairs around meeting table"
+    },
+    {
+      "name": "Meeting table",
+      "category": "Tables",
+      "area": "MEETING-02",
+      "raw_label": "MEETING-02",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "Meeting table visible in room"
+    },
+    {
+      "name": "Meeting chairs",
+      "category": "Seating",
+      "area": "MEETING-02",
+      "raw_label": "MEETING-02",
+      "dimensions": "unknown",
+      "count": 4,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Four chairs around meeting table"
+    },
+    {
+      "name": "Reception desk",
+      "category": "Workstations",
+      "area": "RECEPTION",
+      "raw_label": "RECEPTION",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "Reception counter/desk visible"
+    },
+    {
+      "name": "Reception chair",
+      "category": "Seating",
+      "area": "RECEPTION",
+      "raw_label": "RECEPTION",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "existing reused",
+      "confidence": 0.8,
+      "notes": "Chair for reception desk"
+    },
+    {
+      "name": "Cafeteria tables",
+      "category": "Tables",
+      "area": "CAFETERIA",
+      "raw_label": "CAFETERIA",
+      "dimensions": "unknown",
+      "count": 3,
+      "status": "unknown",
+      "confidence": 0.9,
+      "notes": "Three round cafeteria tables visible"
+    },
+    {
+      "name": "Cafeteria chairs",
+      "category": "Seating",
+      "area": "CAFETERIA",
+      "raw_label": "CAFETERIA",
+      "dimensions": "unknown",
+      "count": 12,
+      "status": "existing reused",
+      "confidence": 0.9,
+      "notes": "Four chairs per table, total 12 chairs"
+    },
+    {
+      "name": "Full-height storage units",
+      "category": "Storage",
+      "area": "CONFERENCE/DEMO ROOM",
+      "raw_label": "FHS",
+      "dimensions": "unknown",
+      "count": 2,
+      "status": "new",
+      "confidence": 0.9,
+      "notes": "Two FHS units labeled in conference room"
+    },
+    {
+      "name": "Storage shelving units",
+      "category": "Storage",
+      "area": "STORE ROOM",
+      "raw_label": "STORE ROOM",
+      "dimensions": "unknown",
+      "count": 4,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "Storage racks/shelving visible in store room"
+    },
+    {
+      "name": "Server racks",
+      "category": "Equipment",
+      "area": "SERVER",
+      "raw_label": "SERVER",
+      "dimensions": "unknown",
+      "count": 3,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "Server racks visible in server room"
+    },
+    {
+      "name": "UPS equipment",
+      "category": "Equipment",
+      "area": "UPS Room",
+      "raw_label": "UPS",
+      "dimensions": "unknown",
+      "count": 1,
+      "status": "unknown",
+      "confidence": 0.8,
+      "notes": "UPS unit visible in designated area"
+    }
+  ],
+  "summary": {
+    "total_items": 23,
+    "total_quantity": 125
+  }
+}
